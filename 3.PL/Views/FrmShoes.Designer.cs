@@ -57,6 +57,7 @@ partial class FrmShoes
         // 
         // btn_category
         // 
+        btn_category.ForeColor = Color.FromArgb(0, 126, 249);
         btn_category.Location = new Point(75, 707);
         btn_category.Name = "btn_category";
         btn_category.Size = new Size(120, 50);
@@ -66,6 +67,7 @@ partial class FrmShoes
         // 
         // btn_material
         // 
+        btn_material.ForeColor = Color.FromArgb(0, 126, 249);
         btn_material.Location = new Point(244, 707);
         btn_material.Name = "btn_material";
         btn_material.Size = new Size(120, 50);
@@ -75,6 +77,7 @@ partial class FrmShoes
         // 
         // btn_size
         // 
+        btn_size.ForeColor = Color.FromArgb(0, 126, 249);
         btn_size.Location = new Point(416, 707);
         btn_size.Name = "btn_size";
         btn_size.Size = new Size(120, 50);
@@ -84,6 +87,7 @@ partial class FrmShoes
         // 
         // btn_color
         // 
+        btn_color.ForeColor = Color.FromArgb(0, 126, 249);
         btn_color.Location = new Point(585, 707);
         btn_color.Name = "btn_color";
         btn_color.Size = new Size(120, 50);
@@ -93,6 +97,7 @@ partial class FrmShoes
         // 
         // button4
         // 
+        button4.ForeColor = Color.FromArgb(0, 126, 249);
         button4.Location = new Point(1155, 707);
         button4.Name = "button4";
         button4.Size = new Size(120, 50);

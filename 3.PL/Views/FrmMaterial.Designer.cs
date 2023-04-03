@@ -89,6 +89,7 @@ partial class FrmMaterial
         // 
         // btn_clear
         // 
+        btn_clear.ForeColor = Color.FromArgb(0, 126, 249);
         btn_clear.Location = new Point(1136, 394);
         btn_clear.Name = "btn_clear";
         btn_clear.Size = new Size(120, 50);
@@ -98,6 +99,7 @@ partial class FrmMaterial
         // 
         // btn_sua
         // 
+        btn_sua.ForeColor = Color.FromArgb(0, 126, 249);
         btn_sua.Location = new Point(1001, 394);
         btn_sua.Name = "btn_sua";
         btn_sua.Size = new Size(120, 50);
@@ -107,6 +109,7 @@ partial class FrmMaterial
         // 
         // btn_them
         // 
+        btn_them.ForeColor = Color.FromArgb(0, 126, 249);
         btn_them.Location = new Point(866, 394);
         btn_them.Name = "btn_them";
         btn_them.Size = new Size(120, 50);

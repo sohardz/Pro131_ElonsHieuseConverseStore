@@ -52,7 +52,7 @@ partial class FrmDashboard
         // 
         // panel1
         // 
-        panel1.BackColor = Color.FromArgb(20, 30, 54);
+        panel1.BackColor = SystemColors.GradientActiveCaption;
         panel1.Controls.Add(pnl_nav);
         panel1.Controls.Add(btn_customerService);
         panel1.Controls.Add(btn_orderService);
@@ -77,6 +77,7 @@ partial class FrmDashboard
         // 
         // btn_customerService
         // 
+        btn_customerService.BackColor = SystemColors.ActiveCaption;
         btn_customerService.Dock = DockStyle.Top;
         btn_customerService.FlatAppearance.BorderSize = 0;
         btn_customerService.FlatStyle = FlatStyle.Flat;
@@ -88,12 +89,13 @@ partial class FrmDashboard
         btn_customerService.TabIndex = 6;
         btn_customerService.Text = "Khách hàng";
         btn_customerService.TextImageRelation = TextImageRelation.TextBeforeImage;
-        btn_customerService.UseVisualStyleBackColor = true;
+        btn_customerService.UseVisualStyleBackColor = false;
         btn_customerService.Click += btn_customerService_Click;
         btn_customerService.Leave += btn_customerService_Leave;
         // 
         // btn_orderService
         // 
+        btn_orderService.BackColor = SystemColors.ActiveCaption;
         btn_orderService.Dock = DockStyle.Top;
         btn_orderService.FlatAppearance.BorderSize = 0;
         btn_orderService.FlatStyle = FlatStyle.Flat;
@@ -105,12 +107,13 @@ partial class FrmDashboard
         btn_orderService.TabIndex = 5;
         btn_orderService.Text = "Hóa đơn";
         btn_orderService.TextImageRelation = TextImageRelation.TextBeforeImage;
-        btn_orderService.UseVisualStyleBackColor = true;
+        btn_orderService.UseVisualStyleBackColor = false;
         btn_orderService.Click += btn_orderService_Click;
         btn_orderService.Leave += btn_orderService_Leave;
         // 
         // btn_dangxuat
         // 
+        btn_dangxuat.BackColor = SystemColors.ActiveCaption;
         btn_dangxuat.Dock = DockStyle.Bottom;
         btn_dangxuat.FlatAppearance.BorderSize = 0;
         btn_dangxuat.FlatStyle = FlatStyle.Flat;
@@ -122,11 +125,12 @@ partial class FrmDashboard
         btn_dangxuat.TabIndex = 4;
         btn_dangxuat.Text = "Đăng xuất";
         btn_dangxuat.TextImageRelation = TextImageRelation.TextBeforeImage;
-        btn_dangxuat.UseVisualStyleBackColor = true;
+        btn_dangxuat.UseVisualStyleBackColor = false;
         btn_dangxuat.Click += btn_dangxuat_Click;
         // 
         // btn_staffService
         // 
+        btn_staffService.BackColor = SystemColors.ActiveCaption;
         btn_staffService.Dock = DockStyle.Top;
         btn_staffService.FlatAppearance.BorderSize = 0;
         btn_staffService.FlatStyle = FlatStyle.Flat;
@@ -138,12 +142,13 @@ partial class FrmDashboard
         btn_staffService.TabIndex = 3;
         btn_staffService.Text = "Nhân viên";
         btn_staffService.TextImageRelation = TextImageRelation.TextBeforeImage;
-        btn_staffService.UseVisualStyleBackColor = true;
+        btn_staffService.UseVisualStyleBackColor = false;
         btn_staffService.Click += btn_staffService_Click;
         btn_staffService.Leave += btn_staffService_Leave;
         // 
         // btn_productDetailService
         // 
+        btn_productDetailService.BackColor = SystemColors.ActiveCaption;
         btn_productDetailService.Dock = DockStyle.Top;
         btn_productDetailService.FlatAppearance.BorderSize = 0;
         btn_productDetailService.FlatStyle = FlatStyle.Flat;
@@ -155,12 +160,13 @@ partial class FrmDashboard
         btn_productDetailService.TabIndex = 2;
         btn_productDetailService.Text = "Sản phẩm";
         btn_productDetailService.TextImageRelation = TextImageRelation.TextBeforeImage;
-        btn_productDetailService.UseVisualStyleBackColor = true;
+        btn_productDetailService.UseVisualStyleBackColor = false;
         btn_productDetailService.Click += btn_productDetailService_Click;
         btn_productDetailService.Leave += btn_productDetailService_Leave;
         // 
         // btn_sellingService
         // 
+        btn_sellingService.BackColor = SystemColors.ActiveCaption;
         btn_sellingService.Dock = DockStyle.Top;
         btn_sellingService.FlatAppearance.BorderSize = 0;
         btn_sellingService.FlatStyle = FlatStyle.Flat;
@@ -172,12 +178,13 @@ partial class FrmDashboard
         btn_sellingService.TabIndex = 1;
         btn_sellingService.Text = "Bán hàng";
         btn_sellingService.TextImageRelation = TextImageRelation.TextBeforeImage;
-        btn_sellingService.UseVisualStyleBackColor = true;
+        btn_sellingService.UseVisualStyleBackColor = false;
         btn_sellingService.Click += btn_sellingService_Click;
         btn_sellingService.Leave += btn_sellingService_Leave;
         // 
         // panel2
         // 
+        panel2.BackColor = SystemColors.GradientActiveCaption;
         panel2.Controls.Add(label2);
         panel2.Controls.Add(lbl_userName);
         panel2.Controls.Add(picBox_userAvatar);
@@ -222,7 +229,7 @@ partial class FrmDashboard
         // 
         lbl_title.AutoSize = true;
         lbl_title.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-        lbl_title.ForeColor = Color.FromArgb(158, 161, 178);
+        lbl_title.ForeColor = Color.FromArgb(0, 126, 249);
         lbl_title.Location = new Point(226, 8);
         lbl_title.Name = "lbl_title";
         lbl_title.Size = new Size(136, 37);
@@ -255,12 +262,13 @@ partial class FrmDashboard
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
-        BackColor = Color.FromArgb(46, 51, 73);
+        BackColor = SystemColors.GradientActiveCaption;
         ClientSize = new Size(1600, 900);
         Controls.Add(pnl_formLoader);
         Controls.Add(lbl_timenow);
         Controls.Add(lbl_title);
         Controls.Add(panel1);
+        ForeColor = SystemColors.ControlText;
         FormBorderStyle = FormBorderStyle.None;
         Name = "FrmDashboard";
         StartPosition = FormStartPosition.CenterScreen;

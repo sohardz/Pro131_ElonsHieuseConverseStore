@@ -72,7 +72,7 @@ partial class FrmStaff
         // 
         panel2.Controls.Add(rbtn_nu);
         panel2.Controls.Add(rbtn_nam);
-        panel2.Location = new Point(90, 168);
+        panel2.Location = new Point(187, 181);
         panel2.Name = "panel2";
         panel2.Size = new Size(245, 25);
         panel2.TabIndex = 185;
@@ -105,7 +105,7 @@ partial class FrmStaff
         // 
         panel1.Controls.Add(rbtn_khonghoatdong);
         panel1.Controls.Add(rbtn_hoatdong);
-        panel1.Location = new Point(455, 208);
+        panel1.Location = new Point(552, 181);
         panel1.Name = "panel1";
         panel1.Size = new Size(245, 25);
         panel1.TabIndex = 184;
@@ -138,7 +138,7 @@ partial class FrmStaff
         // 
         lbl_tenAnh.AutoSize = true;
         lbl_tenAnh.ForeColor = Color.FromArgb(0, 126, 249);
-        lbl_tenAnh.Location = new Point(835, 218);
+        lbl_tenAnh.Location = new Point(932, 231);
         lbl_tenAnh.Name = "lbl_tenAnh";
         lbl_tenAnh.Size = new Size(48, 15);
         lbl_tenAnh.TabIndex = 183;
@@ -146,7 +146,8 @@ partial class FrmStaff
         // 
         // btn_chonAnh
         // 
-        btn_chonAnh.Location = new Point(815, 238);
+        btn_chonAnh.ForeColor = Color.FromArgb(0, 126, 249);
+        btn_chonAnh.Location = new Point(912, 251);
         btn_chonAnh.Name = "btn_chonAnh";
         btn_chonAnh.Size = new Size(100, 23);
         btn_chonAnh.TabIndex = 182;
@@ -155,7 +156,7 @@ partial class FrmStaff
         // 
         // picBox_anhNhanvien
         // 
-        picBox_anhNhanvien.Location = new Point(750, 8);
+        picBox_anhNhanvien.Location = new Point(847, 21);
         picBox_anhNhanvien.Name = "picBox_anhNhanvien";
         picBox_anhNhanvien.Size = new Size(230, 195);
         picBox_anhNhanvien.SizeMode = PictureBoxSizeMode.Zoom;
@@ -164,7 +165,7 @@ partial class FrmStaff
         // 
         // txt_email
         // 
-        txt_email.Location = new Point(455, 128);
+        txt_email.Location = new Point(552, 101);
         txt_email.Name = "txt_email";
         txt_email.Size = new Size(245, 23);
         txt_email.TabIndex = 180;
@@ -173,7 +174,7 @@ partial class FrmStaff
         // 
         label11.AutoSize = true;
         label11.ForeColor = Color.FromArgb(0, 126, 249);
-        label11.Location = new Point(365, 128);
+        label11.Location = new Point(462, 101);
         label11.Name = "label11";
         label11.Size = new Size(36, 15);
         label11.TabIndex = 179;
@@ -181,7 +182,7 @@ partial class FrmStaff
         // 
         // txt_timkiem
         // 
-        txt_timkiem.Location = new Point(1015, 48);
+        txt_timkiem.Location = new Point(552, 223);
         txt_timkiem.Name = "txt_timkiem";
         txt_timkiem.Size = new Size(245, 23);
         txt_timkiem.TabIndex = 175;
@@ -189,38 +190,36 @@ partial class FrmStaff
         // 
         // dgrid_nhanvien
         // 
-        dgrid_nhanvien.BackgroundColor = Color.FromArgb(20, 30, 54);
         dgrid_nhanvien.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        dgrid_nhanvien.Dock = DockStyle.Bottom;
-        dgrid_nhanvien.Location = new Point(0, 383);
+        dgrid_nhanvien.Location = new Point(53, 319);
         dgrid_nhanvien.Name = "dgrid_nhanvien";
         dgrid_nhanvien.RowTemplate.Height = 25;
-        dgrid_nhanvien.Size = new Size(1350, 417);
+        dgrid_nhanvien.Size = new Size(1245, 454);
         dgrid_nhanvien.TabIndex = 174;
         // 
         // btn_clear
         // 
-        btn_clear.Location = new Point(1015, 208);
+        btn_clear.Location = new Point(1158, 154);
         btn_clear.Name = "btn_clear";
-        btn_clear.Size = new Size(100, 45);
+        btn_clear.Size = new Size(120, 50);
         btn_clear.TabIndex = 173;
         btn_clear.Text = "Clear";
         btn_clear.UseVisualStyleBackColor = true;
         // 
         // btn_sua
         // 
-        btn_sua.Location = new Point(1015, 148);
+        btn_sua.Location = new Point(1158, 88);
         btn_sua.Name = "btn_sua";
-        btn_sua.Size = new Size(100, 45);
+        btn_sua.Size = new Size(120, 50);
         btn_sua.TabIndex = 172;
         btn_sua.Text = "Sửa";
         btn_sua.UseVisualStyleBackColor = true;
         // 
         // btn_them
         // 
-        btn_them.Location = new Point(1015, 88);
+        btn_them.Location = new Point(1158, 21);
         btn_them.Name = "btn_them";
-        btn_them.Size = new Size(100, 45);
+        btn_them.Size = new Size(120, 50);
         btn_them.TabIndex = 171;
         btn_them.Text = "Thêm";
         btn_them.UseVisualStyleBackColor = true;
@@ -229,7 +228,7 @@ partial class FrmStaff
         // 
         label14.AutoSize = true;
         label14.ForeColor = Color.FromArgb(0, 126, 249);
-        label14.Location = new Point(365, 208);
+        label14.Location = new Point(462, 181);
         label14.Name = "label14";
         label14.Size = new Size(61, 15);
         label14.TabIndex = 169;
@@ -237,56 +236,56 @@ partial class FrmStaff
         // 
         // dtpicker_ngaysinh
         // 
-        dtpicker_ngaysinh.Location = new Point(455, 48);
+        dtpicker_ngaysinh.Location = new Point(552, 61);
         dtpicker_ngaysinh.Name = "dtpicker_ngaysinh";
         dtpicker_ngaysinh.Size = new Size(245, 23);
         dtpicker_ngaysinh.TabIndex = 167;
         // 
         // txt_matkhau
         // 
-        txt_matkhau.Location = new Point(455, 168);
+        txt_matkhau.Location = new Point(552, 141);
         txt_matkhau.Name = "txt_matkhau";
         txt_matkhau.Size = new Size(245, 23);
         txt_matkhau.TabIndex = 166;
         // 
         // txt_sdt
         // 
-        txt_sdt.Location = new Point(455, 8);
+        txt_sdt.Location = new Point(552, 21);
         txt_sdt.Name = "txt_sdt";
         txt_sdt.Size = new Size(245, 23);
         txt_sdt.TabIndex = 165;
         // 
         // txt_diachi
         // 
-        txt_diachi.Location = new Point(90, 248);
+        txt_diachi.Location = new Point(187, 223);
         txt_diachi.Name = "txt_diachi";
         txt_diachi.Size = new Size(245, 23);
         txt_diachi.TabIndex = 164;
         // 
         // txt_ten
         // 
-        txt_ten.Location = new Point(90, 128);
+        txt_ten.Location = new Point(187, 141);
         txt_ten.Name = "txt_ten";
         txt_ten.Size = new Size(245, 23);
         txt_ten.TabIndex = 163;
         // 
         // txt_tendem
         // 
-        txt_tendem.Location = new Point(90, 88);
+        txt_tendem.Location = new Point(187, 101);
         txt_tendem.Name = "txt_tendem";
         txt_tendem.Size = new Size(245, 23);
         txt_tendem.TabIndex = 162;
         // 
         // txt_ho
         // 
-        txt_ho.Location = new Point(90, 48);
+        txt_ho.Location = new Point(187, 61);
         txt_ho.Name = "txt_ho";
         txt_ho.Size = new Size(245, 23);
         txt_ho.TabIndex = 161;
         // 
         // txt_ma
         // 
-        txt_ma.Location = new Point(90, 8);
+        txt_ma.Location = new Point(187, 21);
         txt_ma.Name = "txt_ma";
         txt_ma.Size = new Size(245, 23);
         txt_ma.TabIndex = 160;
@@ -295,7 +294,7 @@ partial class FrmStaff
         // 
         label12.AutoSize = true;
         label12.ForeColor = Color.FromArgb(0, 126, 249);
-        label12.Location = new Point(365, 168);
+        label12.Location = new Point(462, 141);
         label12.Name = "label12";
         label12.Size = new Size(58, 15);
         label12.TabIndex = 159;
@@ -305,7 +304,7 @@ partial class FrmStaff
         // 
         label9.AutoSize = true;
         label9.ForeColor = Color.FromArgb(0, 126, 249);
-        label9.Location = new Point(365, 48);
+        label9.Location = new Point(462, 61);
         label9.Name = "label9";
         label9.Size = new Size(61, 15);
         label9.TabIndex = 157;
@@ -315,7 +314,7 @@ partial class FrmStaff
         // 
         label8.AutoSize = true;
         label8.ForeColor = Color.FromArgb(0, 126, 249);
-        label8.Location = new Point(365, 8);
+        label8.Location = new Point(462, 21);
         label8.Name = "label8";
         label8.Size = new Size(27, 15);
         label8.TabIndex = 156;
@@ -325,7 +324,7 @@ partial class FrmStaff
         // 
         label7.AutoSize = true;
         label7.ForeColor = Color.FromArgb(0, 126, 249);
-        label7.Location = new Point(15, 248);
+        label7.Location = new Point(112, 223);
         label7.Name = "label7";
         label7.Size = new Size(45, 15);
         label7.TabIndex = 155;
@@ -335,7 +334,7 @@ partial class FrmStaff
         // 
         label6.AutoSize = true;
         label6.ForeColor = Color.FromArgb(0, 126, 249);
-        label6.Location = new Point(15, 168);
+        label6.Location = new Point(112, 181);
         label6.Name = "label6";
         label6.Size = new Size(54, 15);
         label6.TabIndex = 154;
@@ -345,7 +344,7 @@ partial class FrmStaff
         // 
         label5.AutoSize = true;
         label5.ForeColor = Color.FromArgb(0, 126, 249);
-        label5.Location = new Point(15, 128);
+        label5.Location = new Point(112, 141);
         label5.Name = "label5";
         label5.Size = new Size(25, 15);
         label5.TabIndex = 153;
@@ -355,7 +354,7 @@ partial class FrmStaff
         // 
         label4.AutoSize = true;
         label4.ForeColor = Color.FromArgb(0, 126, 249);
-        label4.Location = new Point(15, 88);
+        label4.Location = new Point(112, 101);
         label4.Name = "label4";
         label4.Size = new Size(53, 15);
         label4.TabIndex = 152;
@@ -365,7 +364,7 @@ partial class FrmStaff
         // 
         label3.AutoSize = true;
         label3.ForeColor = Color.FromArgb(0, 126, 249);
-        label3.Location = new Point(15, 48);
+        label3.Location = new Point(112, 61);
         label3.Name = "label3";
         label3.Size = new Size(23, 15);
         label3.TabIndex = 151;
@@ -375,7 +374,7 @@ partial class FrmStaff
         // 
         label2.AutoSize = true;
         label2.ForeColor = Color.FromArgb(0, 126, 249);
-        label2.Location = new Point(15, 8);
+        label2.Location = new Point(112, 21);
         label2.Name = "label2";
         label2.Size = new Size(24, 15);
         label2.TabIndex = 150;
