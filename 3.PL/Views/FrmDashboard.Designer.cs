@@ -230,7 +230,7 @@ partial class FrmDashboard
         lbl_title.AutoSize = true;
         lbl_title.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
         lbl_title.ForeColor = Color.FromArgb(0, 126, 249);
-        lbl_title.Location = new Point(226, 8);
+        lbl_title.Location = new Point(238, 9);
         lbl_title.Name = "lbl_title";
         lbl_title.Size = new Size(136, 37);
         lbl_title.TabIndex = 10;
