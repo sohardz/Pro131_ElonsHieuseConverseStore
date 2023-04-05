@@ -17,7 +17,7 @@ public partial class FrmStaff : Form
     {
         InitializeComponent();
         _staffService = new StaffService();
-        txt_ma.Enabled= false;
+        txt_ma.Enabled = false;
     }
 
     private void LoadDgrid(string input)

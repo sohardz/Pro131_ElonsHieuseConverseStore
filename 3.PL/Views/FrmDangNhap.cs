@@ -15,7 +15,6 @@ namespace _3.PL.Views.DangNhap
             nhanVienService = new StaffService();
         }
 
-
         private bool KiemTranDangNhap(string tentaikhoan, string matkhau)
         {
             if (tentaikhoan == username && matkhau == password)

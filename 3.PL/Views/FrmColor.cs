@@ -11,7 +11,7 @@ public partial class FrmColor : Form
 {
     private IColorService _colorService;
     private string _maWhenclick;
-    
+
     public FrmColor()
     {
         InitializeComponent();
@@ -77,7 +77,7 @@ public partial class FrmColor : Form
             //FrmCtDienThoai.LoadCmb();
         }
     }
-    
+
     private void btn_sua_Click(object sender, EventArgs e)
     {
         DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn sửa màu này?", "Xác nhận", MessageBoxButtons.YesNo);

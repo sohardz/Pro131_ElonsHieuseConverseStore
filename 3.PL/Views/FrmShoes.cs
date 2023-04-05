@@ -9,7 +9,7 @@ public partial class FrmShoes : Form
     private IColorService _colorService;
     private ISizeService _sizeService;
     private ICategoryService _categoryService;
-    private string _maWhenClick;
+    private string _maWhenclick;
 
     public FrmShoes()
     {
@@ -46,6 +46,10 @@ public partial class FrmShoes : Form
 
     private void dgrid_shoes_CellClick(object sender, DataGridViewCellEventArgs e)
     {
+        if (e.RowIndex == -1 || e.RowIndex == _shoesService.GetAll().Count) return;
+        int rowIndex = e.RowIndex;
+        _maWhenclick = dgrid_shoes.Rows[rowIndex].Cells[1].Value.ToString();
+        var ctdt = _shoesService.GetAll().FirstOrDefault(c => c.Ma == _maWhenclick);
 
     }
 
