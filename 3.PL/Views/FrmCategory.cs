@@ -13,6 +13,7 @@ public partial class FrmCategory : Form
         InitializeComponent();
         _categoryService = new CategoryService();
         LoadDgrid(null);
+        txt_ma.Enabled = false;
     }
 
     private void LoadDgrid(string input)

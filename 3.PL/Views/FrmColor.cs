@@ -17,6 +17,7 @@ public partial class FrmColor : Form
         InitializeComponent();
         _colorService = new ColorService();
         LoadDgrid(null);
+        txt_ma.Enabled = false;
     }
 
     private void LoadDgrid(string input)

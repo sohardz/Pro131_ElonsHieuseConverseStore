@@ -15,6 +15,7 @@ public partial class FrmSize : Form
         InitializeComponent();
         _sizeService = new SizeService();
         LoadDgrid(null);
+        txt_ma.Enabled = false;
     }
 
     private void LoadDgrid(string input)
