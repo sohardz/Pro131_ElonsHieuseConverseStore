@@ -19,24 +19,35 @@ public partial class FrmConfigShoes : Form
     private IColorService _colorService;
     private ISizeService _sizeService;
     private ICategoryService _categoryService;
+    private IMaterialService _materialService;
     private string ImagePath;
     private string img = @"C:\Users\This PC\OneDrive - Đại học FPT- FPT University\Desktop\conv1.png";
 
-    public FrmConfigShoes()
+    FrmShoes _frmShoes;
+
+    public FrmConfigShoes(FrmShoes frmShoes)
     {
         InitializeComponent();
         _categoryService = new CategoryService();
         _colorService = new ColorService();
         _sizeService = new SizeService();
         _shoesService = new ShoesService();
+        _materialService = new MaterialService();
         LoadCmb();
+        _frmShoes = frmShoes;
+        txt_ma.Enabled = false;
     }
     public void LoadCmb()
     {
         cmb_category.Items.Clear();
         cmb_color.Items.Clear();
         cmb_size.Items.Clear();
+        cmb_material.Items.Clear();
 
+        foreach (var x in _materialService.GetAll())
+        {
+            cmb_material.Items.Add(x.Name);
+        }
 
         foreach (var x in _categoryService.GetAll())
         {
@@ -53,6 +64,7 @@ public partial class FrmConfigShoes : Form
             cmb_size.Items.Add(x.SizeNumber);
         }
     }
+
     private bool CheckGetData()
     {
         if (cmb_category.SelectedIndex == -1)
@@ -118,9 +130,11 @@ public partial class FrmConfigShoes : Form
         var shoes = new ShoesView()
         {
             Ma = txt_ma.Text,
+            MaMaterial = _materialService.GetAll()[cmb_material.SelectedIndex].Ma,
             MaCategory = _categoryService.GetAll()[cmb_category.SelectedIndex].Ma,
             MaSize = _sizeService.GetAll()[cmb_size.SelectedIndex].Ma,
             MaColor = _colorService.GetAll()[cmb_color.SelectedIndex].Ma,
+            Name = txt_ten.Text,
             Stock = Convert.ToInt32(txt_soluong.Text),
             CostPrice = Convert.ToDecimal(txt_gianhap.Text),
             SalePrice = Convert.ToDecimal(txt_giaban.Text),
@@ -133,29 +147,33 @@ public partial class FrmConfigShoes : Form
 
     private void btn_save_Click(object sender, EventArgs e)
     {
-        //if (!CheckGetData()) return;
+        if (!CheckGetData()) return;
 
-        //var x = GetDataFromGui();
+        var x = GetDataFromGui();
 
-        //var ma = string.IsNullOrEmpty(txt_ma.Text) ? "Shoes" + (_shoesService.GetAll().Count + 1) : txt_ma.Text;
-        //foreach (var y in _shoesService.GetAll())
-        //{
-        //    if (y.Ma == ma) ma = "Shoes" + (_shoesService.GetAll().Count + 1);
-        //}
-        //x.Ma = ma;
+        var ma = string.IsNullOrEmpty(txt_ma.Text) ? "Shoes" + (_shoesService.GetAll().Count + 1) : txt_ma.Text;
+        foreach (var y in _shoesService.GetAll())
+        {
+            if (y.Ma == ma) ma = "CTDT" + (_shoesService.GetAll().Count + 1);
+        }
+        x.Ma = ma;
 
-        //DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn thêm sản phẩm này?", "Xác nhận", MessageBoxButtons.YesNo);
-        //if (dialogResult == DialogResult.Yes)
-        //{
-        //    MessageBox.Show(_shoesService.Add(x));
-        //    FrmShoes shoes = new FrmShoes();
-        //    shoes.ShowDialog();
-        //}
+        DialogResult dialogResult = MessageBox.Show("Bạn có chắc đã hoàn thành?", "Xác nhận", MessageBoxButtons.YesNo);
+        if (dialogResult == DialogResult.Yes)
+        {
+            MessageBox.Show(_shoesService.Add(x));
+            _frmShoes.LoadDgrid();
+            Close();
+        }
     }
 
-    private void button2_Click(object sender, EventArgs e)
+    private void btn_huy_Click(object sender, EventArgs e)
     {
-        this.Close();
+        DialogResult dialogResult = MessageBox.Show("Bản có chắc muốn hủy?", "Xác nhận", MessageBoxButtons.YesNo);
+        if (dialogResult == DialogResult.Yes)
+        {
+            Close();
+        }
     }
 
     private void btn_chonAnh_Click(object sender, EventArgs e)

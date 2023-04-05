@@ -14,6 +14,7 @@ public partial class FrmMaterial : Form
     {
         InitializeComponent();
         _materialService = new MaterialService();
+        txt_ma.Enabled = false;
     }
 
     private void LoadDgrid(string input)
@@ -58,14 +59,14 @@ public partial class FrmMaterial : Form
     {
         var x = GetDataFromGui();
 
-        var ma = string.IsNullOrEmpty(txt_ma.Text) ? "MS" + (_materialService.GetAll().Count + 1) : txt_ma.Text;
+        var ma = string.IsNullOrEmpty(txt_ma.Text) ? "Material" + (_materialService.GetAll().Count + 1) : txt_ma.Text;
         foreach (var y in _materialService.GetAll())
         {
-            if (y.Ma == ma) ma = "MS" + (_materialService.GetAll().Count + 1);
+            if (y.Ma == ma) ma = "Material" + (_materialService.GetAll().Count + 1);
         }
         x.Ma = ma;
 
-        DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn thêm màu này?", "Xác nhận", MessageBoxButtons.YesNo);
+        DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn thêm chất liệu này?", "Xác nhận", MessageBoxButtons.YesNo);
         if (dialogResult == DialogResult.Yes)
         {
             MessageBox.Show(_materialService.Add(x));
@@ -78,7 +79,7 @@ public partial class FrmMaterial : Form
 
     private void btn_sua_Click(object sender, EventArgs e)
     {
-        DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn sửa màu này?", "Xác nhận", MessageBoxButtons.YesNo);
+        DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn sửa chất liệu này?", "Xác nhận", MessageBoxButtons.YesNo);
         if (dialogResult == DialogResult.Yes)
         {
             MessageBox.Show(_materialService.Update(GetDataFromGui()));

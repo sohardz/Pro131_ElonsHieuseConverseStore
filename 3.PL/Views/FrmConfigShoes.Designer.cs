@@ -53,7 +53,9 @@ partial class FrmConfigShoes
         label8 = new Label();
         txt_ten = new TextBox();
         btn_save = new Button();
-        button2 = new Button();
+        btn_huy = new Button();
+        cmb_material = new ComboBox();
+        label2 = new Label();
         ((System.ComponentModel.ISupportInitialize)picBox_shoesImage).BeginInit();
         SuspendLayout();
         // 
@@ -159,7 +161,7 @@ partial class FrmConfigShoes
         // cmb_category
         // 
         cmb_category.FormattingEnabled = true;
-        cmb_category.Location = new Point(124, 186);
+        cmb_category.Location = new Point(124, 146);
         cmb_category.Name = "cmb_category";
         cmb_category.Size = new Size(225, 23);
         cmb_category.TabIndex = 187;
@@ -255,7 +257,7 @@ partial class FrmConfigShoes
         // 
         label1.AutoSize = true;
         label1.ForeColor = Color.FromArgb(0, 126, 249);
-        label1.Location = new Point(27, 186);
+        label1.Location = new Point(27, 146);
         label1.Name = "label1";
         label1.Size = new Size(91, 15);
         label1.TabIndex = 170;
@@ -265,7 +267,7 @@ partial class FrmConfigShoes
         // 
         label8.AutoSize = true;
         label8.ForeColor = Color.FromArgb(0, 126, 249);
-        label8.Location = new Point(27, 105);
+        label8.Location = new Point(27, 84);
         label8.Name = "label8";
         label8.Size = new Size(25, 15);
         label8.TabIndex = 203;
@@ -273,7 +275,7 @@ partial class FrmConfigShoes
         // 
         // txt_ten
         // 
-        txt_ten.Location = new Point(124, 102);
+        txt_ten.Location = new Point(124, 81);
         txt_ten.Name = "txt_ten";
         txt_ten.Size = new Size(225, 23);
         txt_ten.TabIndex = 202;
@@ -288,22 +290,42 @@ partial class FrmConfigShoes
         btn_save.UseVisualStyleBackColor = true;
         btn_save.Click += btn_save_Click;
         // 
-        // button2
+        // btn_huy
         // 
-        button2.Location = new Point(635, 425);
-        button2.Name = "button2";
-        button2.Size = new Size(150, 50);
-        button2.TabIndex = 205;
-        button2.Text = "Hủy";
-        button2.UseVisualStyleBackColor = true;
-        button2.Click += button2_Click;
+        btn_huy.Location = new Point(635, 425);
+        btn_huy.Name = "btn_huy";
+        btn_huy.Size = new Size(150, 50);
+        btn_huy.TabIndex = 205;
+        btn_huy.Text = "Hủy";
+        btn_huy.UseVisualStyleBackColor = true;
+        btn_huy.Click += btn_huy_Click;
+        // 
+        // cmb_material
+        // 
+        cmb_material.FormattingEnabled = true;
+        cmb_material.Location = new Point(124, 207);
+        cmb_material.Name = "cmb_material";
+        cmb_material.Size = new Size(225, 23);
+        cmb_material.TabIndex = 207;
+        // 
+        // label2
+        // 
+        label2.AutoSize = true;
+        label2.ForeColor = Color.FromArgb(0, 126, 249);
+        label2.Location = new Point(27, 207);
+        label2.Name = "label2";
+        label2.Size = new Size(54, 15);
+        label2.TabIndex = 206;
+        label2.Text = "Chất liệu";
         // 
         // FrmConfigShoes
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(1284, 511);
-        Controls.Add(button2);
+        Controls.Add(cmb_material);
+        Controls.Add(label2);
+        Controls.Add(btn_huy);
         Controls.Add(btn_save);
         Controls.Add(label8);
         Controls.Add(txt_ten);
@@ -363,5 +385,7 @@ partial class FrmConfigShoes
     private Label label8;
     private TextBox txt_ten;
     private Button btn_save;
-    private Button button2;
+    private Button btn_huy;
+    private ComboBox cmb_material;
+    private Label label2;
 }

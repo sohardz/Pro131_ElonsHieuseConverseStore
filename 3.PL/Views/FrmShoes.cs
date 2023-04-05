@@ -10,6 +10,7 @@ public partial class FrmShoes : Form
     private ISizeService _sizeService;
     private ICategoryService _categoryService;
     private string _maWhenClick;
+
     public FrmShoes()
     {
         InitializeComponent();
@@ -19,7 +20,8 @@ public partial class FrmShoes : Form
         _shoesService = new ShoesService();
         LoadDgrid();
     }
-    private void LoadDgrid()
+
+    public void LoadDgrid()
     {
         int stt = 1;
         dgrid_shoes.ColumnCount = 11;
@@ -44,6 +46,36 @@ public partial class FrmShoes : Form
 
     private void dgrid_shoes_CellClick(object sender, DataGridViewCellEventArgs e)
     {
-        
+
+    }
+
+    private void btn_category_Click(object sender, EventArgs e)
+    {
+        FrmCategory frmCategory = new();
+        frmCategory.Show();
+    }
+
+    private void btn_material_Click(object sender, EventArgs e)
+    {
+        FrmMaterial frmMaterial = new();
+        frmMaterial.Show();
+    }
+
+    private void btn_size_Click(object sender, EventArgs e)
+    {
+        FrmSize frmSize = new();
+        frmSize.Show();
+    }
+
+    private void btn_color_Click(object sender, EventArgs e)
+    {
+        FrmColor frmColor = new();
+        frmColor.Show();
+    }
+
+    private void btn_them_Click(object sender, EventArgs e)
+    {
+        FrmConfigShoes frmConfigShoes = new(this);
+        frmConfigShoes.Show();
     }
 }
