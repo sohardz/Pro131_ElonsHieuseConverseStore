@@ -74,6 +74,7 @@ partial class FrmCustomer
         dgrid_customer.RowTemplate.Height = 25;
         dgrid_customer.Size = new Size(1270, 481);
         dgrid_customer.TabIndex = 172;
+        dgrid_customer.CellClick += dgrid_customer_CellClick;
         // 
         // btn_clear
         // 
@@ -84,6 +85,7 @@ partial class FrmCustomer
         btn_clear.TabIndex = 171;
         btn_clear.Text = "Clear";
         btn_clear.UseVisualStyleBackColor = true;
+        btn_clear.Click += btn_clear_Click;
         // 
         // btn_sua
         // 
@@ -94,6 +96,7 @@ partial class FrmCustomer
         btn_sua.TabIndex = 170;
         btn_sua.Text = "Sửa";
         btn_sua.UseVisualStyleBackColor = true;
+        btn_sua.Click += btn_sua_Click;
         // 
         // btn_them
         // 
@@ -104,6 +107,7 @@ partial class FrmCustomer
         btn_them.TabIndex = 169;
         btn_them.Text = "Thêm";
         btn_them.UseVisualStyleBackColor = true;
+        btn_them.Click += btn_them_Click;
         // 
         // txt_diachi
         // 
@@ -111,6 +115,7 @@ partial class FrmCustomer
         txt_diachi.Name = "txt_diachi";
         txt_diachi.Size = new Size(250, 23);
         txt_diachi.TabIndex = 167;
+        txt_diachi.Leave += txt_diachi_Leave;
         // 
         // txt_sdt
         // 
@@ -125,6 +130,7 @@ partial class FrmCustomer
         txt_ten.Name = "txt_ten";
         txt_ten.Size = new Size(250, 23);
         txt_ten.TabIndex = 165;
+        txt_ten.Leave += txt_ten_Leave;
         // 
         // txt_tendem
         // 
@@ -132,6 +138,7 @@ partial class FrmCustomer
         txt_tendem.Name = "txt_tendem";
         txt_tendem.Size = new Size(250, 23);
         txt_tendem.TabIndex = 164;
+        txt_tendem.Leave += txt_tendem_Leave;
         // 
         // txt_ho
         // 
@@ -139,6 +146,7 @@ partial class FrmCustomer
         txt_ho.Name = "txt_ho";
         txt_ho.Size = new Size(250, 23);
         txt_ho.TabIndex = 163;
+        txt_ho.Leave += txt_ho_Leave;
         // 
         // txt_ma
         // 

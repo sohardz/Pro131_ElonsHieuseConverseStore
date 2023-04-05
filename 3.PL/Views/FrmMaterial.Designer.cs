@@ -96,6 +96,7 @@ partial class FrmMaterial
         btn_clear.TabIndex = 82;
         btn_clear.Text = "Clear";
         btn_clear.UseVisualStyleBackColor = true;
+        btn_clear.Click += btn_clear_Click;
         // 
         // btn_sua
         // 
@@ -106,6 +107,7 @@ partial class FrmMaterial
         btn_sua.TabIndex = 81;
         btn_sua.Text = "Sửa";
         btn_sua.UseVisualStyleBackColor = true;
+        btn_sua.Click += btn_sua_Click;
         // 
         // btn_them
         // 
@@ -116,6 +118,7 @@ partial class FrmMaterial
         btn_them.TabIndex = 80;
         btn_them.Text = "Thêm";
         btn_them.UseVisualStyleBackColor = true;
+        btn_them.Click += btn_them_Click;
         // 
         // txt_timkiem
         // 
@@ -158,6 +161,7 @@ partial class FrmMaterial
         dgrid_material.RowTemplate.Height = 25;
         dgrid_material.Size = new Size(800, 550);
         dgrid_material.TabIndex = 75;
+        dgrid_material.CellClick += dgrid_material_CellClick;
         // 
         // FrmMaterial
         // 

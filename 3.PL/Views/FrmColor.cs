@@ -38,13 +38,24 @@ public partial class FrmColor : Form
 
     private ColorView GetDataFromGui()
     {
-        var mauSac = new ColorView()
+        return new ColorView()
         {
             Ma = txt_ma.Text,
             Name = txt_ten.Text,
             Status = rbtn_hoatdong.Checked ? 1 : 0,
         };
-        return mauSac;
+    }
+
+    private void dgrid_color_CellClick(object sender, DataGridViewCellEventArgs e)
+    {
+        if (e.RowIndex == -1 || e.RowIndex == _colorService.GetAll().Count) return;
+        int rowIndex = e.RowIndex;
+        _maWhenclick = dgrid_color.Rows[rowIndex].Cells[1].Value.ToString();
+        var obj = _colorService.GetAll().FirstOrDefault(c => c.Ma == _maWhenclick);
+        txt_ma.Text = obj.Ma;
+        txt_ten.Text = obj.Name;
+        if (obj.Status == 1) rbtn_hoatdong.Checked = true;
+        else rbtn_khonghoatdong.Checked = true;
     }
 
     private void btn_them_Click(object sender, EventArgs e)
@@ -67,17 +78,7 @@ public partial class FrmColor : Form
         }
     }
 
-    private void dgrid_color_CellClick(object sender, DataGridViewCellEventArgs e)
-    {
-        if (e.RowIndex == -1 || e.RowIndex == _colorService.GetAll().Count) return;
-        int rowIndex = e.RowIndex;
-        _maWhenclick = dgrid_color.Rows[rowIndex].Cells[1].Value.ToString();
-        var obj = _colorService.GetAll().FirstOrDefault(c => c.Ma == _maWhenclick);
-        txt_ma.Text = obj.Ma;
-        txt_ten.Text = obj.Name;
-        if (obj.Status == 1) rbtn_hoatdong.Checked = true;
-        else rbtn_khonghoatdong.Checked = true;
-    }
+    
 
     private void btn_sua_Click(object sender, EventArgs e)
     {

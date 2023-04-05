@@ -34,6 +34,7 @@ public partial class FrmSize : Form
         }
 
     }
+
     private SizeView GetDataFromGui()
     {
         var size = new SizeView()
@@ -44,6 +45,7 @@ public partial class FrmSize : Form
         };
         return size;
     }
+
     private void btn_them_Click(object sender, EventArgs e)
     {
         var x = GetDataFromGui();
@@ -65,7 +67,7 @@ public partial class FrmSize : Form
 
     private void btn_sua_Click(object sender, EventArgs e)
     {
-        DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn sửa màu này?", "Xác nhận", MessageBoxButtons.YesNo);
+        DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn sửa kích cỡ này?", "Xác nhận", MessageBoxButtons.YesNo);
         if (dialogResult == DialogResult.Yes)
         {
             MessageBox.Show(_sizeService.Update(GetDataFromGui()));
