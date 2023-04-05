@@ -3,17 +3,21 @@ using _2.BUS.Services;
 using _2.BUS.ViewModels;
 using _3.PL.Utilities;
 
+
+
 namespace _3.PL.Views;
 
 public partial class FrmColor : Form
 {
     private IColorService _colorService;
     private string _maWhenclick;
-
+    
     public FrmColor()
     {
         InitializeComponent();
         _colorService = new ColorService();
+        LoadDgrid(null);
+        txt_ma.Enabled = false;
     }
 
     private void LoadDgrid(string input)
