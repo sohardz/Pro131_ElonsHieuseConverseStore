@@ -28,6 +28,8 @@ internal class StoreDbContext : DbContext
         base.OnConfiguring(optionsBuilder.UseSqlServer("Data Source=DESKTOP-P5GSVI1\\SQLEXPRESS;Initial Catalog=ConverseStore;Persist Security Info=True;User ID=cuongnpm;Password=123456"));
 
         //base.OnConfiguring(optionsBuilder.UseSqlServer("Data Source=NKHOC\\SQLEXPRESS;Initial Catalog=ConverseStore;Persist Security Info=True;User ID=hocnk;Password=123456"));
+
+        //base.OnConfiguring(optionsBuilder.UseSqlServer("Data Source=LEMINHHIEU\\SQLEXPRESS;Initial Catalog=ShoeStoreProjectOne;Persist Security Info=True;User ID=lmaohieu;Password=1"));
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
