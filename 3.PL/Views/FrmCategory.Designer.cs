@@ -161,6 +161,7 @@ partial class FrmCategory
         dgrid_category.RowTemplate.Height = 25;
         dgrid_category.Size = new Size(800, 550);
         dgrid_category.TabIndex = 62;
+        dgrid_category.CellClick += dgrid_category_CellClick;
         // 
         // FrmCategory
         // 

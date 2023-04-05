@@ -77,9 +77,7 @@ public partial class FrmColor : Form
             //FrmCtDienThoai.LoadCmb();
         }
     }
-
     
-
     private void btn_sua_Click(object sender, EventArgs e)
     {
         DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn sửa màu này?", "Xác nhận", MessageBoxButtons.YesNo);

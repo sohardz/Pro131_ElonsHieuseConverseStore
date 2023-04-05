@@ -153,6 +153,7 @@ partial class FrmStaff
         btn_chonAnh.TabIndex = 182;
         btn_chonAnh.Text = "Chọn ảnh";
         btn_chonAnh.UseVisualStyleBackColor = true;
+        btn_chonAnh.Click += btn_chonAnh_Click;
         // 
         // picBox_anhNhanvien
         // 
@@ -196,6 +197,7 @@ partial class FrmStaff
         dgrid_nhanvien.RowTemplate.Height = 25;
         dgrid_nhanvien.Size = new Size(1245, 454);
         dgrid_nhanvien.TabIndex = 174;
+        dgrid_nhanvien.CellClick += dgrid_nhanvien_CellClick;
         // 
         // btn_clear
         // 
@@ -205,6 +207,7 @@ partial class FrmStaff
         btn_clear.TabIndex = 173;
         btn_clear.Text = "Clear";
         btn_clear.UseVisualStyleBackColor = true;
+        btn_clear.Click += btn_clear_Click;
         // 
         // btn_sua
         // 
@@ -214,6 +217,7 @@ partial class FrmStaff
         btn_sua.TabIndex = 172;
         btn_sua.Text = "Sửa";
         btn_sua.UseVisualStyleBackColor = true;
+        btn_sua.Click += btn_sua_Click;
         // 
         // btn_them
         // 
@@ -223,6 +227,7 @@ partial class FrmStaff
         btn_them.TabIndex = 171;
         btn_them.Text = "Thêm";
         btn_them.UseVisualStyleBackColor = true;
+        btn_them.Click += btn_them_Click;
         // 
         // label14
         // 
@@ -261,6 +266,7 @@ partial class FrmStaff
         txt_diachi.Name = "txt_diachi";
         txt_diachi.Size = new Size(245, 23);
         txt_diachi.TabIndex = 164;
+        txt_diachi.Leave += txt_diachi_Leave;
         // 
         // txt_ten
         // 
@@ -268,6 +274,7 @@ partial class FrmStaff
         txt_ten.Name = "txt_ten";
         txt_ten.Size = new Size(245, 23);
         txt_ten.TabIndex = 163;
+        txt_ten.Leave += txt_ten_Leave;
         // 
         // txt_tendem
         // 
@@ -275,6 +282,7 @@ partial class FrmStaff
         txt_tendem.Name = "txt_tendem";
         txt_tendem.Size = new Size(245, 23);
         txt_tendem.TabIndex = 162;
+        txt_tendem.Leave += txt_tendem_Leave;
         // 
         // txt_ho
         // 
@@ -282,6 +290,7 @@ partial class FrmStaff
         txt_ho.Name = "txt_ho";
         txt_ho.Size = new Size(245, 23);
         txt_ho.TabIndex = 161;
+        txt_ho.Leave += txt_ho_Leave;
         // 
         // txt_ma
         // 

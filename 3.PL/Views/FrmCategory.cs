@@ -8,6 +8,8 @@ namespace _3.PL.Views;
 public partial class FrmCategory : Form
 {
     private ICategoryService _categoryService;
+    private string _maWhenclick;
+
     public FrmCategory()
     {
         InitializeComponent();
@@ -32,6 +34,7 @@ public partial class FrmCategory : Form
         }
 
     }
+
     private CategoryView GetDataFromGui()
     {
         var size = new CategoryView()
@@ -42,18 +45,31 @@ public partial class FrmCategory : Form
         };
         return size;
     }
+
+    private void dgrid_category_CellClick(object sender, DataGridViewCellEventArgs e)
+    {
+        if (e.RowIndex == -1 || e.RowIndex == _categoryService.GetAll().Count) return;
+        int rowIndex = e.RowIndex;
+        _maWhenclick = dgrid_category.Rows[rowIndex].Cells[1].Value.ToString();
+        var obj = _categoryService.GetAll().FirstOrDefault(c => c.Ma == _maWhenclick);
+        txt_ma.Text = obj.Ma;
+        txt_ten.Text = obj.Name;
+        if (obj.Status == 1) rbtn_hoatdong.Checked = true;
+        else rbtn_khonghoatdong.Checked = true;
+    }
+
     private void btn_them_Click(object sender, EventArgs e)
     {
         var x = GetDataFromGui();
 
-        var ma = string.IsNullOrEmpty(txt_ma.Text) ? "Size" + (_categoryService.GetAll().Count + 1) : txt_ma.Text;
+        var ma = string.IsNullOrEmpty(txt_ma.Text) ? "Category" + (_categoryService.GetAll().Count + 1) : txt_ma.Text;
         foreach (var y in _categoryService.GetAll())
         {
-            if (y.Ma == ma) ma = "Size " + (_categoryService.GetAll().Count + 1);
+            if (y.Ma == ma) ma = "Category " + (_categoryService.GetAll().Count + 1);
         }
         x.Ma = ma;
 
-        DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn thêm kích cỡ này?", "Xác nhận", MessageBoxButtons.YesNo);
+        DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn thêm loại giày này này?", "Xác nhận", MessageBoxButtons.YesNo);
         if (dialogResult == DialogResult.Yes)
         {
             MessageBox.Show(_categoryService.Add(x));
@@ -79,4 +95,6 @@ public partial class FrmCategory : Form
         rbtn_khonghoatdong.Checked = false;
         LoadDgrid(null);
     }
+
+
 }
