@@ -1,4 +1,5 @@
 using _3.PL.Views;
+using _3.PL.Views.DangNhap;
 
 namespace _3.PL;
 
@@ -13,6 +14,6 @@ internal static class Program
         // To customize application configuration such as set high DPI settings or default font,
         // see https://aka.ms/applicationconfiguration.
         ApplicationConfiguration.Initialize();
-        Application.Run(new FrmDashboard());
+        Application.Run(new FrmDangNhap());
     }
 }
