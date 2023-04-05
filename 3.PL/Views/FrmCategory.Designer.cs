@@ -96,6 +96,7 @@ partial class FrmCategory
         btn_clear.TabIndex = 70;
         btn_clear.Text = "Clear";
         btn_clear.UseVisualStyleBackColor = true;
+        btn_clear.Click += btn_clear_Click;
         // 
         // btn_sua
         // 
@@ -106,6 +107,7 @@ partial class FrmCategory
         btn_sua.TabIndex = 68;
         btn_sua.Text = "Sửa";
         btn_sua.UseVisualStyleBackColor = true;
+        btn_sua.Click += btn_sua_Click;
         // 
         // btn_them
         // 
@@ -116,6 +118,7 @@ partial class FrmCategory
         btn_them.TabIndex = 67;
         btn_them.Text = "Thêm";
         btn_them.UseVisualStyleBackColor = true;
+        btn_them.Click += btn_them_Click;
         // 
         // txt_timkiem
         // 

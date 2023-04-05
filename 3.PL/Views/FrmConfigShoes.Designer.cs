@@ -30,7 +30,7 @@ partial class FrmConfigShoes
     {
         lbl_tenAnh = new Label();
         btn_chonAnh = new Button();
-        picBox_anhNhanvien = new PictureBox();
+        picBox_shoesImage = new PictureBox();
         label15 = new Label();
         rbtn_khonghoatdong = new RadioButton();
         rbtn_hoatdong = new RadioButton();
@@ -42,7 +42,7 @@ partial class FrmConfigShoes
         txt_soluong = new TextBox();
         txt_giaban = new TextBox();
         txt_gianhap = new TextBox();
-        cmb_ = new ComboBox();
+        cmb_color = new ComboBox();
         richtxt_mota = new RichTextBox();
         label9 = new Label();
         label7 = new Label();
@@ -52,9 +52,9 @@ partial class FrmConfigShoes
         label1 = new Label();
         label8 = new Label();
         txt_ten = new TextBox();
-        button1 = new Button();
+        btn_save = new Button();
         button2 = new Button();
-        ((System.ComponentModel.ISupportInitialize)picBox_anhNhanvien).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)picBox_shoesImage).BeginInit();
         SuspendLayout();
         // 
         // lbl_tenAnh
@@ -76,15 +76,16 @@ partial class FrmConfigShoes
         btn_chonAnh.TabIndex = 200;
         btn_chonAnh.Text = "Chọn ảnh";
         btn_chonAnh.UseVisualStyleBackColor = true;
+        btn_chonAnh.Click += btn_chonAnh_Click;
         // 
-        // picBox_anhNhanvien
+        // picBox_shoesImage
         // 
-        picBox_anhNhanvien.Location = new Point(858, 12);
-        picBox_anhNhanvien.Name = "picBox_anhNhanvien";
-        picBox_anhNhanvien.Size = new Size(400, 350);
-        picBox_anhNhanvien.SizeMode = PictureBoxSizeMode.Zoom;
-        picBox_anhNhanvien.TabIndex = 199;
-        picBox_anhNhanvien.TabStop = false;
+        picBox_shoesImage.Location = new Point(858, 12);
+        picBox_shoesImage.Name = "picBox_shoesImage";
+        picBox_shoesImage.Size = new Size(400, 350);
+        picBox_shoesImage.SizeMode = PictureBoxSizeMode.Zoom;
+        picBox_shoesImage.TabIndex = 199;
+        picBox_shoesImage.TabStop = false;
         // 
         // label15
         // 
@@ -184,13 +185,13 @@ partial class FrmConfigShoes
         txt_gianhap.Size = new Size(250, 23);
         txt_gianhap.TabIndex = 183;
         // 
-        // cmb_
+        // cmb_color
         // 
-        cmb_.FormattingEnabled = true;
-        cmb_.Location = new Point(124, 269);
-        cmb_.Name = "cmb_";
-        cmb_.Size = new Size(225, 23);
-        cmb_.TabIndex = 181;
+        cmb_color.FormattingEnabled = true;
+        cmb_color.Location = new Point(124, 269);
+        cmb_color.Name = "cmb_color";
+        cmb_color.Size = new Size(225, 23);
+        cmb_color.TabIndex = 181;
         // 
         // richtxt_mota
         // 
@@ -277,14 +278,15 @@ partial class FrmConfigShoes
         txt_ten.Size = new Size(225, 23);
         txt_ten.TabIndex = 202;
         // 
-        // button1
+        // btn_save
         // 
-        button1.Location = new Point(425, 425);
-        button1.Name = "button1";
-        button1.Size = new Size(150, 50);
-        button1.TabIndex = 204;
-        button1.Text = "Lưu";
-        button1.UseVisualStyleBackColor = true;
+        btn_save.Location = new Point(425, 425);
+        btn_save.Name = "btn_save";
+        btn_save.Size = new Size(150, 50);
+        btn_save.TabIndex = 204;
+        btn_save.Text = "Lưu";
+        btn_save.UseVisualStyleBackColor = true;
+        btn_save.Click += btn_save_Click;
         // 
         // button2
         // 
@@ -294,6 +296,7 @@ partial class FrmConfigShoes
         button2.TabIndex = 205;
         button2.Text = "Hủy";
         button2.UseVisualStyleBackColor = true;
+        button2.Click += button2_Click;
         // 
         // FrmConfigShoes
         // 
@@ -301,12 +304,12 @@ partial class FrmConfigShoes
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(1284, 511);
         Controls.Add(button2);
-        Controls.Add(button1);
+        Controls.Add(btn_save);
         Controls.Add(label8);
         Controls.Add(txt_ten);
         Controls.Add(lbl_tenAnh);
         Controls.Add(btn_chonAnh);
-        Controls.Add(picBox_anhNhanvien);
+        Controls.Add(picBox_shoesImage);
         Controls.Add(label15);
         Controls.Add(rbtn_khonghoatdong);
         Controls.Add(rbtn_hoatdong);
@@ -318,7 +321,7 @@ partial class FrmConfigShoes
         Controls.Add(txt_soluong);
         Controls.Add(txt_giaban);
         Controls.Add(txt_gianhap);
-        Controls.Add(cmb_);
+        Controls.Add(cmb_color);
         Controls.Add(richtxt_mota);
         Controls.Add(label9);
         Controls.Add(label7);
@@ -328,7 +331,7 @@ partial class FrmConfigShoes
         Controls.Add(label1);
         Name = "FrmConfigShoes";
         Text = "FrmConfigShoes";
-        ((System.ComponentModel.ISupportInitialize)picBox_anhNhanvien).EndInit();
+        ((System.ComponentModel.ISupportInitialize)picBox_shoesImage).EndInit();
         ResumeLayout(false);
         PerformLayout();
     }
@@ -337,7 +340,7 @@ partial class FrmConfigShoes
 
     private Label lbl_tenAnh;
     private Button btn_chonAnh;
-    private PictureBox picBox_anhNhanvien;
+    private PictureBox picBox_shoesImage;
     private Label label15;
     private RadioButton rbtn_khonghoatdong;
     private RadioButton rbtn_hoatdong;
@@ -349,7 +352,7 @@ partial class FrmConfigShoes
     private TextBox txt_soluong;
     private TextBox txt_giaban;
     private TextBox txt_gianhap;
-    private ComboBox cmb_;
+    private ComboBox cmb_color;
     private RichTextBox richtxt_mota;
     private Label label9;
     private Label label7;
@@ -359,6 +362,6 @@ partial class FrmConfigShoes
     private Label label1;
     private Label label8;
     private TextBox txt_ten;
-    private Button button1;
+    private Button btn_save;
     private Button button2;
 }

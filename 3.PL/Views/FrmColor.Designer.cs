@@ -94,7 +94,7 @@ partial class FrmColor
         btn_clear.Name = "btn_clear";
         btn_clear.Size = new Size(120, 50);
         btn_clear.TabIndex = 82;
-        btn_clear.Text = "Clear";
+        btn_clear.Text = "Làm mới";
         btn_clear.UseVisualStyleBackColor = true;
         btn_clear.Click += btn_clear_Click;
         // 

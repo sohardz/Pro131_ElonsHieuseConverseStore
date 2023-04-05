@@ -46,6 +46,7 @@ partial class FrmShoes
         dgrid_shoes.RowTemplate.Height = 25;
         dgrid_shoes.Size = new Size(1200, 600);
         dgrid_shoes.TabIndex = 0;
+        dgrid_shoes.CellClick += dgrid_shoes_CellClick;
         // 
         // txt_timkiem
         // 
@@ -109,7 +110,7 @@ partial class FrmShoes
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
-        ClientSize = new Size(1350, 800);
+        ClientSize = new Size(1350, 788);
         Controls.Add(button4);
         Controls.Add(btn_color);
         Controls.Add(btn_size);

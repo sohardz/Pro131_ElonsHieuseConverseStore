@@ -36,7 +36,7 @@ partial class FrmSize
         btn_sua = new Button();
         btn_them = new Button();
         txt_timkiem = new TextBox();
-        txt_ten = new TextBox();
+        txt_size = new TextBox();
         txt_ma = new TextBox();
         label1 = new Label();
         dgrid_size = new DataGridView();
@@ -83,9 +83,9 @@ partial class FrmSize
         label3.ForeColor = Color.FromArgb(0, 126, 249);
         label3.Location = new Point(906, 268);
         label3.Name = "label3";
-        label3.Size = new Size(25, 15);
+        label3.Size = new Size(46, 15);
         label3.TabIndex = 83;
-        label3.Text = "Tên";
+        label3.Text = "Kích cỡ";
         // 
         // btn_clear
         // 
@@ -95,6 +95,7 @@ partial class FrmSize
         btn_clear.TabIndex = 82;
         btn_clear.Text = "Clear";
         btn_clear.UseVisualStyleBackColor = true;
+        btn_clear.Click += btn_clear_Click;
         // 
         // btn_sua
         // 
@@ -104,6 +105,7 @@ partial class FrmSize
         btn_sua.TabIndex = 81;
         btn_sua.Text = "Sửa";
         btn_sua.UseVisualStyleBackColor = true;
+        btn_sua.Click += btn_sua_Click;
         // 
         // btn_them
         // 
@@ -123,12 +125,12 @@ partial class FrmSize
         txt_timkiem.TabIndex = 79;
         txt_timkiem.Text = "Tìm Kiếm";
         // 
-        // txt_ten
+        // txt_size
         // 
-        txt_ten.Location = new Point(991, 268);
-        txt_ten.Name = "txt_ten";
-        txt_ten.Size = new Size(250, 23);
-        txt_ten.TabIndex = 78;
+        txt_size.Location = new Point(991, 268);
+        txt_size.Name = "txt_size";
+        txt_size.Size = new Size(250, 23);
+        txt_size.TabIndex = 78;
         // 
         // txt_ma
         // 
@@ -156,6 +158,7 @@ partial class FrmSize
         dgrid_size.RowTemplate.Height = 25;
         dgrid_size.Size = new Size(800, 550);
         dgrid_size.TabIndex = 75;
+        dgrid_size.CellClick += dgrid_size_CellClick;
         // 
         // FrmSize
         // 
@@ -170,7 +173,7 @@ partial class FrmSize
         Controls.Add(btn_sua);
         Controls.Add(btn_them);
         Controls.Add(txt_timkiem);
-        Controls.Add(txt_ten);
+        Controls.Add(txt_size);
         Controls.Add(txt_ma);
         Controls.Add(label1);
         Controls.Add(dgrid_size);
@@ -192,7 +195,7 @@ partial class FrmSize
     private Button btn_sua;
     private Button btn_them;
     private TextBox txt_timkiem;
-    private TextBox txt_ten;
+    private TextBox txt_size;
     private TextBox txt_ma;
     private Label label1;
     private DataGridView dgrid_size;
