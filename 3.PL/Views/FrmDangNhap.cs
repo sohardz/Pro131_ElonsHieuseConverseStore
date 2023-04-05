@@ -63,9 +63,9 @@ namespace _3.PL.Views.DangNhap
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FrmQuenMatKhau frmQuenMatKhau = new FrmQuenMatKhau();
+            FrmQuenMatKhau frmQuenMatKhau = new();
             frmQuenMatKhau.Show();
-            this.Hide();
+            Hide();
         }
 
         private void cb_SaveAccount_CheckedChanged(object sender, EventArgs e)

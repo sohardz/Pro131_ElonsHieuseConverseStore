@@ -63,8 +63,9 @@
             guna2Panel1.Controls.Add(guna2Panel3);
             guna2Panel1.Dock = DockStyle.Fill;
             guna2Panel1.Location = new Point(0, 0);
+            guna2Panel1.Margin = new Padding(3, 2, 3, 2);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.Size = new Size(1013, 673);
+            guna2Panel1.Size = new Size(886, 505);
             guna2Panel1.TabIndex = 0;
             // 
             // guna2Panel3
@@ -76,9 +77,10 @@
             guna2Panel3.Controls.Add(txtEmail);
             guna2Panel3.Controls.Add(guna2HtmlLabel2);
             guna2Panel3.Controls.Add(guna2HtmlLabel1);
-            guna2Panel3.Location = new Point(521, 116);
+            guna2Panel3.Location = new Point(456, 87);
+            guna2Panel3.Margin = new Padding(3, 2, 3, 2);
             guna2Panel3.Name = "guna2Panel3";
-            guna2Panel3.Size = new Size(374, 420);
+            guna2Panel3.Size = new Size(327, 315);
             guna2Panel3.TabIndex = 0;
             // 
             // btn_back
@@ -95,9 +97,10 @@
             btn_back.FillColor = Color.FromArgb(20, 30, 54);
             btn_back.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btn_back.ForeColor = Color.White;
-            btn_back.Location = new Point(204, 305);
+            btn_back.Location = new Point(178, 229);
+            btn_back.Margin = new Padding(3, 2, 3, 2);
             btn_back.Name = "btn_back";
-            btn_back.Size = new Size(93, 39);
+            btn_back.Size = new Size(81, 29);
             btn_back.TabIndex = 7;
             btn_back.Text = "Quay lại";
             btn_back.UseTransparentBackground = true;
@@ -114,9 +117,10 @@
             btn_confirm.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btn_confirm.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btn_confirm.ForeColor = Color.White;
-            btn_confirm.Location = new Point(77, 305);
+            btn_confirm.Location = new Point(67, 229);
+            btn_confirm.Margin = new Padding(3, 2, 3, 2);
             btn_confirm.Name = "btn_confirm";
-            btn_confirm.Size = new Size(93, 39);
+            btn_confirm.Size = new Size(81, 29);
             btn_confirm.TabIndex = 6;
             btn_confirm.Text = "Xác nhận";
             btn_confirm.UseTransparentBackground = true;
@@ -124,19 +128,21 @@
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(77, 210);
+            txtEmail.Location = new Point(67, 158);
+            txtEmail.Margin = new Padding(3, 2, 3, 2);
             txtEmail.Name = "txtEmail";
             txtEmail.PlaceholderText = "Email";
-            txtEmail.Size = new Size(220, 27);
+            txtEmail.Size = new Size(193, 23);
             txtEmail.TabIndex = 2;
             // 
             // guna2HtmlLabel2
             // 
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2HtmlLabel2.Location = new Point(130, 118);
+            guna2HtmlLabel2.Location = new Point(114, 88);
+            guna2HtmlLabel2.Margin = new Padding(3, 2, 3, 2);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(112, 30);
+            guna2HtmlLabel2.Size = new Size(92, 23);
             guna2HtmlLabel2.TabIndex = 1;
             guna2HtmlLabel2.Text = "Nhập email";
             // 
@@ -144,9 +150,10 @@
             // 
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2HtmlLabel1.Location = new Point(95, 73);
+            guna2HtmlLabel1.Location = new Point(87, 52);
+            guna2HtmlLabel1.Margin = new Padding(3, 2, 3, 2);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(184, 39);
+            guna2HtmlLabel1.Size = new Size(145, 32);
             guna2HtmlLabel1.TabIndex = 0;
             guna2HtmlLabel1.Text = "Nhớ mật khẩu";
             // 
@@ -162,30 +169,31 @@
             guna2Panel2.Controls.Add(guna2PictureBox1);
             guna2Panel2.Dock = DockStyle.Left;
             guna2Panel2.Location = new Point(0, 0);
+            guna2Panel2.Margin = new Padding(3, 2, 3, 2);
             guna2Panel2.Name = "guna2Panel2";
-            guna2Panel2.Size = new Size(381, 673);
+            guna2Panel2.Size = new Size(409, 505);
             guna2Panel2.TabIndex = 1;
             // 
             // guna2PictureBox1
             // 
-            guna2PictureBox1.Image = Properties.Resources.nicepic;
+            guna2PictureBox1.Image = Properties.Resources.bfe792439c6f42edf0e1daa1bf9b6407;
             guna2PictureBox1.ImageRotate = 0F;
             guna2PictureBox1.Location = new Point(0, 0);
+            guna2PictureBox1.Margin = new Padding(3, 2, 3, 2);
             guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.Size = new Size(382, 670);
+            guna2PictureBox1.Size = new Size(409, 502);
             guna2PictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             guna2PictureBox1.TabIndex = 0;
             guna2PictureBox1.TabStop = false;
             // 
             // FrmQuenMatKhau
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1013, 673);
+            ClientSize = new Size(886, 505);
             Controls.Add(guna2Panel2);
             Controls.Add(guna2Panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "FrmQuenMatKhau";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmQuenMatKhau";
