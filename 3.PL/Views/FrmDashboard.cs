@@ -1,9 +1,13 @@
-﻿using System.Runtime.InteropServices;
+﻿using _2.BUS.ViewModels;
+using _3.PL.Views.DangNhap;
+using System.Runtime.InteropServices;
 
 namespace _3.PL.Views;
 
 public partial class FrmDashboard : Form
 {
+    private string img = @"C:\Users\adm\Desktop\Pro131_ElonsHieuseConverseStore\3.PL\Image\noimage.png";
+
     [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
     private static extern IntPtr CreateRoundRectRgn
     (
@@ -15,7 +19,7 @@ public partial class FrmDashboard : Form
         int nHeightEllipse
     );
 
-    public FrmDashboard()
+    public FrmDashboard(StaffView staff)
     {
         InitializeComponent();
         Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
@@ -23,6 +27,17 @@ public partial class FrmDashboard : Form
         pnl_nav.Top = btn_sellingService.Top;
         pnl_nav.Left = btn_sellingService.Left;
         //btn_sellingService.BackColor = Color.FromArgb(46, 51, 73);
+
+        if(staff != null )
+        {
+            picBox_userAvatar.Image = new Bitmap(staff.ImageDirection);
+            lbl_userName.Text = staff.LastName + staff.MiddleName + staff.FirstName;
+        }
+        else
+        {
+            picBox_userAvatar.Image = new Bitmap(img);
+            lbl_userName.Text = "Admin";
+        }
     }
 
     private void FrmDashboard_Load(object sender, EventArgs e)
@@ -139,8 +154,8 @@ public partial class FrmDashboard : Form
         if (dialogResult == DialogResult.Yes)
         {
             Close();
-            //FrmDangNhap frmDangNhap = new();
-            //frmDangNhap.Show();
+            FrmDangNhap frmDangNhap = new();
+            frmDangNhap.Show();
         }
         else return;
     }

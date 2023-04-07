@@ -30,9 +30,10 @@
         {
             components = new System.ComponentModel.Container();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            button2 = new Button();
+            button1 = new Button();
             linkLabel1 = new LinkLabel();
             cb_SaveAccount = new Guna.UI2.WinForms.Guna2CheckBox();
-            btn_exit = new Guna.UI2.WinForms.Guna2Button();
             btn_login = new Guna.UI2.WinForms.Guna2Button();
             txt_password = new TextBox();
             txt_email = new TextBox();
@@ -53,9 +54,10 @@
             // guna2Panel1
             // 
             guna2Panel1.BackColor = Color.FromArgb(20, 30, 54);
+            guna2Panel1.Controls.Add(button2);
+            guna2Panel1.Controls.Add(button1);
             guna2Panel1.Controls.Add(linkLabel1);
             guna2Panel1.Controls.Add(cb_SaveAccount);
-            guna2Panel1.Controls.Add(btn_exit);
             guna2Panel1.Controls.Add(btn_login);
             guna2Panel1.Controls.Add(txt_password);
             guna2Panel1.Controls.Add(txt_email);
@@ -64,8 +66,32 @@
             guna2Panel1.Location = new Point(0, 0);
             guna2Panel1.Margin = new Padding(3, 2, 3, 2);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.Size = new Size(296, 505);
+            guna2Panel1.Size = new Size(290, 505);
             guna2Panel1.TabIndex = 7;
+            // 
+            // button2
+            // 
+            button2.ForeColor = Color.Black;
+            button2.Image = Properties.Resources.icons8_hide_30;
+            button2.Location = new Point(249, 247);
+            button2.Name = "button2";
+            button2.Size = new Size(35, 35);
+            button2.TabIndex = 10;
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.White;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.ForeColor = Color.Black;
+            button1.Image = Properties.Resources.icons8_eye_30;
+            button1.Location = new Point(249, 247);
+            button1.Name = "button1";
+            button1.Size = new Size(35, 35);
+            button1.TabIndex = 8;
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // linkLabel1
             // 
@@ -99,29 +125,6 @@
             cb_SaveAccount.UncheckedState.FillColor = Color.FromArgb(125, 137, 149);
             cb_SaveAccount.CheckedChanged += cb_SaveAccount_CheckedChanged;
             // 
-            // btn_exit
-            // 
-            btn_exit.Animated = true;
-            btn_exit.BackColor = Color.Transparent;
-            btn_exit.BorderColor = Color.FromArgb(94, 148, 255);
-            btn_exit.BorderRadius = 10;
-            btn_exit.BorderThickness = 2;
-            btn_exit.DisabledState.BorderColor = Color.DarkGray;
-            btn_exit.DisabledState.CustomBorderColor = Color.DarkGray;
-            btn_exit.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btn_exit.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btn_exit.FillColor = Color.FromArgb(20, 30, 54);
-            btn_exit.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_exit.ForeColor = Color.White;
-            btn_exit.Location = new Point(150, 360);
-            btn_exit.Margin = new Padding(3, 2, 3, 2);
-            btn_exit.Name = "btn_exit";
-            btn_exit.Size = new Size(96, 29);
-            btn_exit.TabIndex = 5;
-            btn_exit.Text = "Thoát";
-            btn_exit.UseTransparentBackground = true;
-            btn_exit.Click += btn_exit_Click;
-            // 
             // btn_login
             // 
             btn_login.Animated = true;
@@ -133,10 +136,10 @@
             btn_login.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btn_login.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btn_login.ForeColor = Color.White;
-            btn_login.Location = new Point(49, 360);
+            btn_login.Location = new Point(86, 370);
             btn_login.Margin = new Padding(3, 2, 3, 2);
             btn_login.Name = "btn_login";
-            btn_login.Size = new Size(95, 29);
+            btn_login.Size = new Size(120, 40);
             btn_login.TabIndex = 4;
             btn_login.Text = "Đăng nhập";
             btn_login.UseTransparentBackground = true;
@@ -150,7 +153,6 @@
             txt_password.PlaceholderText = "Mật khẩu";
             txt_password.Size = new Size(197, 23);
             txt_password.TabIndex = 3;
-            txt_password.UseSystemPasswordChar = true;
             // 
             // txt_email
             // 
@@ -182,10 +184,10 @@
             guna2Panel2.Controls.Add(guna2ControlBox1);
             guna2Panel2.Controls.Add(guna2PictureBox2);
             guna2Panel2.Dock = DockStyle.Fill;
-            guna2Panel2.Location = new Point(296, 0);
+            guna2Panel2.Location = new Point(290, 0);
             guna2Panel2.Margin = new Padding(3, 2, 3, 2);
             guna2Panel2.Name = "guna2Panel2";
-            guna2Panel2.Size = new Size(735, 505);
+            guna2Panel2.Size = new Size(741, 505);
             guna2Panel2.TabIndex = 8;
             // 
             // guna2ControlBox2
@@ -195,7 +197,7 @@
             guna2ControlBox2.FillColor = Color.FromArgb(20, 30, 54);
             guna2ControlBox2.HoverState.FillColor = Color.Navy;
             guna2ControlBox2.IconColor = Color.White;
-            guna2ControlBox2.Location = new Point(652, 9);
+            guna2ControlBox2.Location = new Point(658, 9);
             guna2ControlBox2.Margin = new Padding(3, 2, 3, 2);
             guna2ControlBox2.Name = "guna2ControlBox2";
             guna2ControlBox2.Size = new Size(33, 27);
@@ -207,7 +209,7 @@
             guna2ControlBox1.FillColor = Color.FromArgb(20, 30, 54);
             guna2ControlBox1.HoverState.FillColor = Color.Navy;
             guna2ControlBox1.IconColor = Color.White;
-            guna2ControlBox1.Location = new Point(691, 9);
+            guna2ControlBox1.Location = new Point(697, 9);
             guna2ControlBox1.Margin = new Padding(3, 2, 3, 2);
             guna2ControlBox1.Name = "guna2ControlBox1";
             guna2ControlBox1.Size = new Size(33, 27);
@@ -217,10 +219,10 @@
             // 
             guna2PictureBox2.Image = Properties.Resources.Side_Step_WebBanners_Converse;
             guna2PictureBox2.ImageRotate = 0F;
-            guna2PictureBox2.Location = new Point(0, 0);
+            guna2PictureBox2.Location = new Point(6, 0);
             guna2PictureBox2.Margin = new Padding(3, 2, 3, 2);
             guna2PictureBox2.Name = "guna2PictureBox2";
-            guna2PictureBox2.Size = new Size(735, 503);
+            guna2PictureBox2.Size = new Size(729, 503);
             guna2PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             guna2PictureBox2.TabIndex = 0;
             guna2PictureBox2.TabStop = false;
@@ -272,12 +274,13 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private TextBox txt_password;
         private TextBox txt_email;
-        private Guna.UI2.WinForms.Guna2Button btn_exit;
         private Guna.UI2.WinForms.Guna2Button btn_login;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private LinkLabel linkLabel1;
         private Guna.UI2.WinForms.Guna2CheckBox cb_SaveAccount;
+        private Button button2;
+        private Button button1;
     }
 }

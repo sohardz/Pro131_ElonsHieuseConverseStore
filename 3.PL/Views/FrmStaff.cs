@@ -18,23 +18,22 @@ public partial class FrmStaff : Form
         InitializeComponent();
         _staffService = new StaffService();
         txt_ma.Enabled = false;
+        LoadDgrid(null);
     }
 
     private void LoadDgrid(string input)
     {
         int stt = 1;
-        dgrid_nhanvien.ColumnCount = 11;
+        dgrid_nhanvien.ColumnCount = 9;
         dgrid_nhanvien.Columns[0].Name = "STT";
         dgrid_nhanvien.Columns[1].Name = "Mã";
         dgrid_nhanvien.Columns[2].Name = "Tên Đầy Đủ";
-        dgrid_nhanvien.Columns[3].Name = "Cccd";
-        dgrid_nhanvien.Columns[4].Name = "Ngày Sinh";
-        dgrid_nhanvien.Columns[5].Name = "Giới Tính";
-        dgrid_nhanvien.Columns[6].Name = "Địa Chỉ";
-        dgrid_nhanvien.Columns[7].Name = "SĐT";
-        dgrid_nhanvien.Columns[8].Name = "Email";
-        dgrid_nhanvien.Columns[9].Name = "Chức Vụ";
-        dgrid_nhanvien.Columns[10].Name = "Trạng Thái";
+        dgrid_nhanvien.Columns[3].Name = "Ngày Sinh";
+        dgrid_nhanvien.Columns[4].Name = "Giới Tính";
+        dgrid_nhanvien.Columns[5].Name = "Địa Chỉ";
+        dgrid_nhanvien.Columns[6].Name = "SĐT";
+        dgrid_nhanvien.Columns[7].Name = "Email";
+        dgrid_nhanvien.Columns[8].Name = "Trạng Thái";
         dgrid_nhanvien.Rows.Clear();
 
         foreach (var x in _staffService.GetAll(input))

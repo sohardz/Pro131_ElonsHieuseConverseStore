@@ -11,6 +11,8 @@ public partial class FrmShoes : Form
     private ICategoryService _categoryService;
     private string _maWhenclick;
 
+    public delegate void passData(string text);
+
     public FrmShoes()
     {
         InitializeComponent();
@@ -49,8 +51,10 @@ public partial class FrmShoes : Form
         if (e.RowIndex == -1 || e.RowIndex == _shoesService.GetAll().Count) return;
         int rowIndex = e.RowIndex;
         _maWhenclick = dgrid_shoes.Rows[rowIndex].Cells[1].Value.ToString();
-        var ctdt = _shoesService.GetAll().FirstOrDefault(c => c.Ma == _maWhenclick);
-
+        FrmConfigShoes frmConfigShoes = new(this);
+        passData shoes = new(frmConfigShoes.takeData);
+        shoes(_maWhenclick);
+        frmConfigShoes.Show();
     }
 
     private void btn_category_Click(object sender, EventArgs e)

@@ -426,6 +426,7 @@ partial class FrmStaff
         Controls.Add(label2);
         FormBorderStyle = FormBorderStyle.None;
         Name = "FrmStaff";
+        StartPosition = FormStartPosition.CenterScreen;
         Text = "FrmStaff";
         panel2.ResumeLayout(false);
         panel2.PerformLayout();

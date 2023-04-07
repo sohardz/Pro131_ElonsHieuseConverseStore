@@ -72,6 +72,7 @@ partial class FrmBill
         Controls.Add(dgrid_bill);
         FormBorderStyle = FormBorderStyle.None;
         Name = "FrmBill";
+        StartPosition = FormStartPosition.CenterScreen;
         Text = "FrmBill";
         ((System.ComponentModel.ISupportInitialize)dgrid_bill).EndInit();
         ((System.ComponentModel.ISupportInitialize)dgrid_billdetail).EndInit();

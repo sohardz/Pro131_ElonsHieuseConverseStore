@@ -38,22 +38,18 @@ namespace _3.PL.Views.DangNhap
         {
             if (KiemTranDangNhap(txt_email.Text, txt_password.Text))
             {
-                FrmDashboard frmDashBoard = new();
-                frmDashBoard.Show();
                 Hide();
+                var staff = nhanVienService.GetAll().FirstOrDefault(c => c.Email == txt_email.Text);
+                FrmDashboard frmDashBoard = new(staff);
+                frmDashBoard.Show();
             }
             else
             {
-                MessageBox.Show("Incorrect username or password", "Error");
+                MessageBox.Show("Tên đăng nhập sai hoặc mật khẩu sai", "Error");
                 txt_email.Clear();
                 txt_password.Clear();
             }
 
-        }
-
-        private void btn_exit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
@@ -94,6 +90,26 @@ namespace _3.PL.Views.DangNhap
             if (Properties.Settings.Default.Email != string.Empty)
             {
                 cb_SaveAccount.Checked = true;
+            }
+        }
+
+        // ẩn mật khẩu
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (txt_password.PasswordChar == '\0')
+            {
+                button1.BringToFront();
+                txt_password.PasswordChar = '*';
+            }
+        }
+
+        // hiện mật khẩu
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (txt_password.PasswordChar == '*')
+            {
+                button2.BringToFront();
+                txt_password.PasswordChar = '\0';
             }
         }
     }

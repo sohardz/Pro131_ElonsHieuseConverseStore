@@ -229,6 +229,7 @@ partial class FrmCustomer
         Controls.Add(label2);
         FormBorderStyle = FormBorderStyle.None;
         Name = "FrmCustomer";
+        StartPosition = FormStartPosition.CenterScreen;
         Text = "FrmCustomer";
         ((System.ComponentModel.ISupportInitialize)dgrid_customer).EndInit();
         ResumeLayout(false);

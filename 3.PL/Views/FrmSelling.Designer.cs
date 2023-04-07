@@ -404,6 +404,7 @@ partial class FrmSelling
         Controls.Add(groupBox1);
         FormBorderStyle = FormBorderStyle.None;
         Name = "FrmSelling";
+        StartPosition = FormStartPosition.CenterScreen;
         Text = "FrmSelling";
         groupBox4.ResumeLayout(false);
         groupBox4.PerformLayout();

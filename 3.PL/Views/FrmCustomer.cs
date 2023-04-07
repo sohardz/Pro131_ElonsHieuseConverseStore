@@ -22,12 +22,12 @@ public partial class FrmCustomer : Form
     private void LoadDgrid(string input)
     {
         int stt = 1;
-        dgrid_customer.ColumnCount = 7;
+        dgrid_customer.ColumnCount = 5;
         dgrid_customer.Columns[0].Name = "Stt";
         dgrid_customer.Columns[1].Name = "Mã";
         dgrid_customer.Columns[2].Name = "Họ và Tên";
-        dgrid_customer.Columns[4].Name = "Sđt";
-        dgrid_customer.Columns[5].Name = "Địa chỉ";
+        dgrid_customer.Columns[3].Name = "Sđt";
+        dgrid_customer.Columns[4].Name = "Địa chỉ";
         dgrid_customer.Rows.Clear();
 
         foreach (var x in _customerService.GetAll(input))

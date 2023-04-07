@@ -12,7 +12,7 @@ public partial class FrmConfigShoes : Form
     private ICategoryService _categoryService;
     private IMaterialService _materialService;
     private string ImagePath;
-    private string img = @"C:\Users\This PC\OneDrive - Đại học FPT- FPT University\Desktop\conv1.png";
+    private string img = @"C:\Users\adm\Desktop\Pro131_ElonsHieuseConverseStore\3.PL\Image\noimage.png";
 
     FrmShoes _frmShoes;
 
@@ -28,6 +28,29 @@ public partial class FrmConfigShoes : Form
         _frmShoes = frmShoes;
         txt_ma.Enabled = false;
     }
+
+    public void takeData(string text)
+    {
+        var shoes = _shoesService.GetAll().FirstOrDefault(c => c.Ma == text);
+        txt_ma.Text = shoes.Ma;
+        txt_ten.Text = shoes.Name;
+        cmb_category.SelectedIndex = _categoryService.GetAll().FindIndex(c => c.Ma == shoes.MaCategory);
+        cmb_color.SelectedIndex = _colorService.GetAll().FindIndex(c => c.Ma == shoes.MaColor);
+        cmb_size.SelectedIndex = _categoryService.GetAll().FindIndex(c => c.Ma == shoes.MaSize);
+        cmb_material.SelectedIndex = _categoryService.GetAll().FindIndex(c => c.Ma == shoes.MaMaterial);
+        txt_soluong.Text = shoes.Stock.ToString();
+        txt_gianhap.Text = shoes.CostPrice.ToString();
+        txt_giaban.Text = shoes.SalePrice.ToString();
+        if (shoes.Status == 0) rbtn_khonghoatdong.Checked = true;
+        else rbtn_hoatdong.Checked = true;
+        richtxt_mota.Text = shoes.Description;
+        if (string.IsNullOrEmpty(shoes.ImageDirection))
+        {
+            picBox_shoesImage.Image = new Bitmap(img);
+        }
+        else picBox_shoesImage.Image = new Bitmap(shoes.ImageDirection);
+    }
+
     public void LoadCmb()
     {
         cmb_category.Items.Clear();
@@ -149,7 +172,7 @@ public partial class FrmConfigShoes : Form
         }
         x.Ma = ma;
 
-        DialogResult dialogResult = MessageBox.Show("Bạn có chắc đã hoàn thành?", "Xác nhận", MessageBoxButtons.YesNo);
+        DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn thêm sản phẩm này?", "Xác nhận", MessageBoxButtons.YesNo);
         if (dialogResult == DialogResult.Yes)
         {
             MessageBox.Show(_shoesService.Add(x));
@@ -171,5 +194,20 @@ public partial class FrmConfigShoes : Form
     {
         Utility.LoadImage(ref ImagePath);
         picBox_shoesImage.Image = new Bitmap(ImagePath);
+    }
+
+    private void btn_sua_Click(object sender, EventArgs e)
+    {
+        if (!CheckGetData()) return;
+
+        var x = GetDataFromGui();
+
+        DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn sửa sản phẩm này?", "Xác nhận", MessageBoxButtons.YesNo);
+        if (dialogResult == DialogResult.Yes)
+        {
+            MessageBox.Show(_shoesService.Update(x));
+            _frmShoes.LoadDgrid();
+            Close();
+        }
     }
 }

@@ -56,6 +56,7 @@ partial class FrmConfigShoes
         btn_huy = new Button();
         cmb_material = new ComboBox();
         label2 = new Label();
+        btn_sua = new Button();
         ((System.ComponentModel.ISupportInitialize)picBox_shoesImage).BeginInit();
         SuspendLayout();
         // 
@@ -282,17 +283,17 @@ partial class FrmConfigShoes
         // 
         // btn_save
         // 
-        btn_save.Location = new Point(425, 425);
+        btn_save.Location = new Point(365, 425);
         btn_save.Name = "btn_save";
         btn_save.Size = new Size(150, 50);
         btn_save.TabIndex = 204;
-        btn_save.Text = "Lưu";
+        btn_save.Text = "Thêm";
         btn_save.UseVisualStyleBackColor = true;
         btn_save.Click += btn_save_Click;
         // 
         // btn_huy
         // 
-        btn_huy.Location = new Point(635, 425);
+        btn_huy.Location = new Point(726, 425);
         btn_huy.Name = "btn_huy";
         btn_huy.Size = new Size(150, 50);
         btn_huy.TabIndex = 205;
@@ -318,11 +319,22 @@ partial class FrmConfigShoes
         label2.TabIndex = 206;
         label2.Text = "Chất liệu";
         // 
+        // btn_sua
+        // 
+        btn_sua.Location = new Point(549, 425);
+        btn_sua.Name = "btn_sua";
+        btn_sua.Size = new Size(150, 50);
+        btn_sua.TabIndex = 208;
+        btn_sua.Text = "Sửa";
+        btn_sua.UseVisualStyleBackColor = true;
+        btn_sua.Click += btn_sua_Click;
+        // 
         // FrmConfigShoes
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(1284, 511);
+        Controls.Add(btn_sua);
         Controls.Add(cmb_material);
         Controls.Add(label2);
         Controls.Add(btn_huy);
@@ -352,6 +364,7 @@ partial class FrmConfigShoes
         Controls.Add(label4);
         Controls.Add(label1);
         Name = "FrmConfigShoes";
+        StartPosition = FormStartPosition.CenterScreen;
         Text = "FrmConfigShoes";
         ((System.ComponentModel.ISupportInitialize)picBox_shoesImage).EndInit();
         ResumeLayout(false);
@@ -388,4 +401,5 @@ partial class FrmConfigShoes
     private Button btn_huy;
     private ComboBox cmb_material;
     private Label label2;
+    private Button btn_sua;
 }

@@ -15,6 +15,7 @@ public partial class FrmMaterial : Form
         InitializeComponent();
         _materialService = new MaterialService();
         txt_ma.Enabled = false;
+        LoadDgrid(null);
     }
 
     private void LoadDgrid(string input)
