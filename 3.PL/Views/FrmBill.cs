@@ -57,6 +57,8 @@ public partial class FrmBill : Form
         dgrid_billdetail.Columns[4].Name = "Số lượng";
         dgrid_billdetail.Columns[5].Name = "Thành tiền";
         dgrid_billdetail.Columns[6].Name = "Trạng thái";
+
+
     }
     private void btn_printBill_Click(object sender, EventArgs e)
     {
@@ -84,18 +86,18 @@ public partial class FrmBill : Form
                 {
                     try
                     {
-                        PdfPTable pdfTable = new PdfPTable(dgrid_bill.Columns.Count);
+                        PdfPTable pdfTable = new PdfPTable(dgrid_billdetail.Columns.Count);
                         pdfTable.DefaultCell.Padding = 3;
                         pdfTable.WidthPercentage = 100;
                         pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
 
-                        foreach (DataGridViewColumn column in dgrid_bill.Columns)
+                        foreach (DataGridViewColumn column in dgrid_billdetail.Columns)
                         {
                             PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
                             pdfTable.AddCell(cell);
                         }
 
-                        foreach (DataGridViewRow row in dgrid_bill.Rows)
+                        foreach (DataGridViewRow row in dgrid_billdetail.Rows)
                         {
                             foreach (DataGridViewCell cell in row.Cells)
                             {

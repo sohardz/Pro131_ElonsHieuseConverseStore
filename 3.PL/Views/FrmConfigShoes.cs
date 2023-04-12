@@ -36,8 +36,8 @@ public partial class FrmConfigShoes : Form
         txt_ten.Text = shoes.Name;
         cmb_category.SelectedIndex = _categoryService.GetAll().FindIndex(c => c.Ma == shoes.MaCategory);
         cmb_color.SelectedIndex = _colorService.GetAll().FindIndex(c => c.Ma == shoes.MaColor);
-        cmb_size.SelectedIndex = _categoryService.GetAll().FindIndex(c => c.Ma == shoes.MaSize);
-        cmb_material.SelectedIndex = _categoryService.GetAll().FindIndex(c => c.Ma == shoes.MaMaterial);
+        cmb_size.SelectedIndex = _sizeService.GetAll().FindIndex(c => c.Ma == shoes.MaSize);
+        cmb_material.SelectedIndex = _materialService.GetAll().FindIndex(c => c.Ma == shoes.MaMaterial);
         txt_soluong.Text = shoes.Stock.ToString();
         txt_gianhap.Text = shoes.CostPrice.ToString();
         txt_giaban.Text = shoes.SalePrice.ToString();
@@ -176,7 +176,7 @@ public partial class FrmConfigShoes : Form
         if (dialogResult == DialogResult.Yes)
         {
             MessageBox.Show(_shoesService.Add(x));
-            _frmShoes.LoadDgrid();
+            _frmShoes.LoadDgrid(null);
             Close();
         }
     }
@@ -206,7 +206,7 @@ public partial class FrmConfigShoes : Form
         if (dialogResult == DialogResult.Yes)
         {
             MessageBox.Show(_shoesService.Update(x));
-            _frmShoes.LoadDgrid();
+            _frmShoes.LoadDgrid(null);
             Close();
         }
     }
