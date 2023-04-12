@@ -93,24 +93,5 @@ namespace _3.PL.Views.DangNhap
             }
         }
 
-        // ẩn mật khẩu
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (txt_password.PasswordChar == '\0')
-            {
-                button1.BringToFront();
-                txt_password.PasswordChar = '*';
-            }
-        }
-
-        // hiện mật khẩu
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (txt_password.PasswordChar == '*')
-            {
-                button2.BringToFront();
-                txt_password.PasswordChar = '\0';
-            }
-        }
     }
 }

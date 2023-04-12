@@ -81,11 +81,11 @@ partial class FrmDashboard
         btn_customerService.Dock = DockStyle.Top;
         btn_customerService.FlatAppearance.BorderSize = 0;
         btn_customerService.FlatStyle = FlatStyle.Flat;
-        btn_customerService.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+        btn_customerService.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
         btn_customerService.ForeColor = Color.FromArgb(0, 126, 249);
-        btn_customerService.Location = new Point(0, 385);
+        btn_customerService.Location = new Point(0, 425);
         btn_customerService.Name = "btn_customerService";
-        btn_customerService.Size = new Size(220, 40);
+        btn_customerService.Size = new Size(220, 50);
         btn_customerService.TabIndex = 6;
         btn_customerService.Text = "Khách hàng";
         btn_customerService.TextImageRelation = TextImageRelation.TextBeforeImage;
@@ -99,11 +99,11 @@ partial class FrmDashboard
         btn_orderService.Dock = DockStyle.Top;
         btn_orderService.FlatAppearance.BorderSize = 0;
         btn_orderService.FlatStyle = FlatStyle.Flat;
-        btn_orderService.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+        btn_orderService.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
         btn_orderService.ForeColor = Color.FromArgb(0, 126, 249);
-        btn_orderService.Location = new Point(0, 345);
+        btn_orderService.Location = new Point(0, 375);
         btn_orderService.Name = "btn_orderService";
-        btn_orderService.Size = new Size(220, 40);
+        btn_orderService.Size = new Size(220, 50);
         btn_orderService.TabIndex = 5;
         btn_orderService.Text = "Hóa đơn";
         btn_orderService.TextImageRelation = TextImageRelation.TextBeforeImage;
@@ -117,7 +117,7 @@ partial class FrmDashboard
         btn_dangxuat.Dock = DockStyle.Bottom;
         btn_dangxuat.FlatAppearance.BorderSize = 0;
         btn_dangxuat.FlatStyle = FlatStyle.Flat;
-        btn_dangxuat.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+        btn_dangxuat.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
         btn_dangxuat.ForeColor = Color.FromArgb(0, 126, 249);
         btn_dangxuat.Location = new Point(0, 860);
         btn_dangxuat.Name = "btn_dangxuat";
@@ -134,11 +134,11 @@ partial class FrmDashboard
         btn_staffService.Dock = DockStyle.Top;
         btn_staffService.FlatAppearance.BorderSize = 0;
         btn_staffService.FlatStyle = FlatStyle.Flat;
-        btn_staffService.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+        btn_staffService.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
         btn_staffService.ForeColor = Color.FromArgb(0, 126, 249);
-        btn_staffService.Location = new Point(0, 305);
+        btn_staffService.Location = new Point(0, 325);
         btn_staffService.Name = "btn_staffService";
-        btn_staffService.Size = new Size(220, 40);
+        btn_staffService.Size = new Size(220, 50);
         btn_staffService.TabIndex = 3;
         btn_staffService.Text = "Nhân viên";
         btn_staffService.TextImageRelation = TextImageRelation.TextBeforeImage;
@@ -152,11 +152,11 @@ partial class FrmDashboard
         btn_productDetailService.Dock = DockStyle.Top;
         btn_productDetailService.FlatAppearance.BorderSize = 0;
         btn_productDetailService.FlatStyle = FlatStyle.Flat;
-        btn_productDetailService.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+        btn_productDetailService.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
         btn_productDetailService.ForeColor = Color.FromArgb(0, 126, 249);
-        btn_productDetailService.Location = new Point(0, 265);
+        btn_productDetailService.Location = new Point(0, 275);
         btn_productDetailService.Name = "btn_productDetailService";
-        btn_productDetailService.Size = new Size(220, 40);
+        btn_productDetailService.Size = new Size(220, 50);
         btn_productDetailService.TabIndex = 2;
         btn_productDetailService.Text = "Sản phẩm";
         btn_productDetailService.TextImageRelation = TextImageRelation.TextBeforeImage;
@@ -170,11 +170,11 @@ partial class FrmDashboard
         btn_sellingService.Dock = DockStyle.Top;
         btn_sellingService.FlatAppearance.BorderSize = 0;
         btn_sellingService.FlatStyle = FlatStyle.Flat;
-        btn_sellingService.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+        btn_sellingService.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
         btn_sellingService.ForeColor = Color.FromArgb(0, 126, 249);
         btn_sellingService.Location = new Point(0, 225);
         btn_sellingService.Name = "btn_sellingService";
-        btn_sellingService.Size = new Size(220, 40);
+        btn_sellingService.Size = new Size(220, 50);
         btn_sellingService.TabIndex = 1;
         btn_sellingService.Text = "Bán hàng";
         btn_sellingService.TextImageRelation = TextImageRelation.TextBeforeImage;
@@ -208,11 +208,11 @@ partial class FrmDashboard
         // lbl_userName
         // 
         lbl_userName.AutoSize = true;
-        lbl_userName.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+        lbl_userName.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
         lbl_userName.ForeColor = Color.FromArgb(0, 126, 249);
         lbl_userName.Location = new Point(53, 129);
         lbl_userName.Name = "lbl_userName";
-        lbl_userName.Size = new Size(75, 17);
+        lbl_userName.Size = new Size(94, 21);
         lbl_userName.TabIndex = 1;
         lbl_userName.Text = "User Name";
         // 

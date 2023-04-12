@@ -4,10 +4,6 @@ using _2.BUS.ViewModels;
 using _3.PL.Utilities;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
-using System.Drawing.Printing;
-
-using System.Windows.Forms;
-using System.Xml.Linq;
 
 
 
@@ -45,7 +41,7 @@ public partial class FrmBill : Form
 
         foreach (var x in _billService.GetAll())
         {
-            dgrid_bill.Rows.Add(stt++, x.Ma, x.DateofCreation, x.DateofPayment,"", x.StaffName, x.CustomerName, Utility.TrangThaiHoaDon()[x.Status]);
+            dgrid_bill.Rows.Add(stt++, x.Ma, x.DateofCreation, x.DateofPayment, "", x.StaffName, x.CustomerName, Utility.TrangThaiHoaDon()[x.Status]);
         }
     }
     private void SetupBillDetailDrgid()
@@ -135,6 +131,7 @@ public partial class FrmBill : Form
         {
             maHoadon = dgrid_bill.Rows[e.RowIndex].Cells[1].Value.ToString();
             lstBill = _billDetailService.ShowHoadonChitiet(_billService.GetId(maHoadon));
+            dgrid_billdetail.Rows.Clear();
             foreach (var x in lstBill)
             {
                 dgrid_billdetail.Rows.Add(stt++, x.Ma, x.ShoesName, x.UnitPrice, x.Quantity, x.Total, x.Status);

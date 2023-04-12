@@ -11,7 +11,7 @@ namespace _3.PL.Views.DangNhap
         string body;
         string email;
 
-        string from = "lemonade182003@gmail.com";
+        string from = "sohardz01@gmail.com";
         public FrmQuenMatKhau()
         {
             InitializeComponent();
@@ -30,10 +30,10 @@ namespace _3.PL.Views.DangNhap
         public void SendMail(string ballsack)
         {
 
-            MailMessage message = new MailMessage(from, email, "", body);
-            SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
+            MailMessage message = new(from, email, "", body);
+            SmtpClient client = new("smtp.gmail.com", 587);
             client.EnableSsl = true;
-            client.Credentials = new NetworkCredential("lemonade182003@gmail.com", "pjarnbssnhfszjwm");
+            client.Credentials = new NetworkCredential("sohardz01@gmail.com", "wndobnhcpktdhhio");
             client.Send(message);
 
             //Để dùng được chức năng gửi mật khẩu cần bật less sercurity trong manage your account và chỉ có email của tổ chức mới bật được ví dụ như email trường email cá nhân chỉ dùng làm đối tượng được gửi đến

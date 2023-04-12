@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace _3.PL.Views;
+﻿namespace _3.PL.Views;
 public partial class FrmSoLuong : Form
 {
     public int SoLuong;

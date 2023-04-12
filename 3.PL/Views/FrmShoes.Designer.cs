@@ -58,6 +58,7 @@ partial class FrmShoes
         // 
         // btn_category
         // 
+        btn_category.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
         btn_category.ForeColor = Color.FromArgb(0, 126, 249);
         btn_category.Location = new Point(75, 707);
         btn_category.Name = "btn_category";
@@ -69,6 +70,7 @@ partial class FrmShoes
         // 
         // btn_material
         // 
+        btn_material.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
         btn_material.ForeColor = Color.FromArgb(0, 126, 249);
         btn_material.Location = new Point(244, 707);
         btn_material.Name = "btn_material";
@@ -80,6 +82,7 @@ partial class FrmShoes
         // 
         // btn_size
         // 
+        btn_size.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
         btn_size.ForeColor = Color.FromArgb(0, 126, 249);
         btn_size.Location = new Point(416, 707);
         btn_size.Name = "btn_size";
@@ -91,6 +94,7 @@ partial class FrmShoes
         // 
         // btn_color
         // 
+        btn_color.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
         btn_color.ForeColor = Color.FromArgb(0, 126, 249);
         btn_color.Location = new Point(585, 707);
         btn_color.Name = "btn_color";
@@ -102,6 +106,7 @@ partial class FrmShoes
         // 
         // btn_them
         // 
+        btn_them.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
         btn_them.ForeColor = Color.FromArgb(0, 126, 249);
         btn_them.Location = new Point(1155, 707);
         btn_them.Name = "btn_them";

@@ -28,6 +28,9 @@ partial class FrmSelling
     /// </summary>
     private void InitializeComponent()
     {
+        DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+        DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+        DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
         groupBox4 = new GroupBox();
         btn_pay = new Button();
         lbl_change = new Label();
@@ -208,10 +211,18 @@ partial class FrmSelling
         // dgrid_productDetail
         // 
         dgrid_productDetail.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+        dataGridViewCellStyle1.BackColor = SystemColors.Window;
+        dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+        dataGridViewCellStyle1.ForeColor = Color.FromArgb(0, 126, 249);
+        dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+        dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+        dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+        dgrid_productDetail.DefaultCellStyle = dataGridViewCellStyle1;
         dgrid_productDetail.Location = new Point(6, 51);
         dgrid_productDetail.Name = "dgrid_productDetail";
         dgrid_productDetail.RowTemplate.Height = 25;
-        dgrid_productDetail.Size = new Size(850, 400);
+        dgrid_productDetail.Size = new Size(850, 329);
         dgrid_productDetail.TabIndex = 2;
         dgrid_productDetail.CellClick += dgrid_productDetail_CellClick;
         // 
@@ -229,6 +240,14 @@ partial class FrmSelling
         // dgrid_undoneOrder
         // 
         dgrid_undoneOrder.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+        dataGridViewCellStyle2.BackColor = SystemColors.Window;
+        dataGridViewCellStyle2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+        dataGridViewCellStyle2.ForeColor = Color.FromArgb(0, 126, 249);
+        dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+        dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+        dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+        dgrid_undoneOrder.DefaultCellStyle = dataGridViewCellStyle2;
         dgrid_undoneOrder.Dock = DockStyle.Fill;
         dgrid_undoneOrder.Location = new Point(3, 19);
         dgrid_undoneOrder.Name = "dgrid_undoneOrder";
@@ -375,6 +394,14 @@ partial class FrmSelling
         // dgrid_orderDetail
         // 
         dgrid_orderDetail.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+        dataGridViewCellStyle3.BackColor = SystemColors.Window;
+        dataGridViewCellStyle3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+        dataGridViewCellStyle3.ForeColor = Color.FromArgb(0, 126, 249);
+        dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+        dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+        dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+        dgrid_orderDetail.DefaultCellStyle = dataGridViewCellStyle3;
         dgrid_orderDetail.Location = new Point(6, 20);
         dgrid_orderDetail.Name = "dgrid_orderDetail";
         dgrid_orderDetail.RowTemplate.Height = 25;

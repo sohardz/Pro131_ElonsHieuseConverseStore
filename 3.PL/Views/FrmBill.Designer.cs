@@ -66,6 +66,7 @@ partial class FrmBill
         // 
         // btn_printBill
         // 
+        btn_printBill.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
         btn_printBill.Location = new Point(1179, 725);
         btn_printBill.Name = "btn_printBill";
         btn_printBill.Size = new Size(110, 51);

@@ -72,9 +72,10 @@ partial class FrmStaff
         // 
         panel2.Controls.Add(rbtn_nu);
         panel2.Controls.Add(rbtn_nam);
-        panel2.Location = new Point(187, 181);
+        panel2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+        panel2.Location = new Point(167, 181);
         panel2.Name = "panel2";
-        panel2.Size = new Size(245, 25);
+        panel2.Size = new Size(250, 29);
         panel2.TabIndex = 185;
         // 
         // rbtn_nu
@@ -83,7 +84,7 @@ partial class FrmStaff
         rbtn_nu.ForeColor = Color.FromArgb(0, 126, 249);
         rbtn_nu.Location = new Point(75, 2);
         rbtn_nu.Name = "rbtn_nu";
-        rbtn_nu.Size = new Size(41, 19);
+        rbtn_nu.Size = new Size(49, 25);
         rbtn_nu.TabIndex = 123;
         rbtn_nu.TabStop = true;
         rbtn_nu.Text = "Nữ";
@@ -95,7 +96,7 @@ partial class FrmStaff
         rbtn_nam.ForeColor = Color.FromArgb(0, 126, 249);
         rbtn_nam.Location = new Point(5, 2);
         rbtn_nam.Name = "rbtn_nam";
-        rbtn_nam.Size = new Size(51, 19);
+        rbtn_nam.Size = new Size(62, 25);
         rbtn_nam.TabIndex = 122;
         rbtn_nam.TabStop = true;
         rbtn_nam.Text = "Nam";
@@ -105,18 +106,19 @@ partial class FrmStaff
         // 
         panel1.Controls.Add(rbtn_khonghoatdong);
         panel1.Controls.Add(rbtn_hoatdong);
+        panel1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
         panel1.Location = new Point(552, 181);
         panel1.Name = "panel1";
-        panel1.Size = new Size(245, 25);
+        panel1.Size = new Size(250, 29);
         panel1.TabIndex = 184;
         // 
         // rbtn_khonghoatdong
         // 
         rbtn_khonghoatdong.AutoSize = true;
         rbtn_khonghoatdong.ForeColor = Color.FromArgb(0, 126, 249);
-        rbtn_khonghoatdong.Location = new Point(100, 2);
+        rbtn_khonghoatdong.Location = new Point(111, 7);
         rbtn_khonghoatdong.Name = "rbtn_khonghoatdong";
-        rbtn_khonghoatdong.Size = new Size(118, 19);
+        rbtn_khonghoatdong.Size = new Size(148, 25);
         rbtn_khonghoatdong.TabIndex = 142;
         rbtn_khonghoatdong.TabStop = true;
         rbtn_khonghoatdong.Text = "Không hoạt động";
@@ -126,9 +128,9 @@ partial class FrmStaff
         // 
         rbtn_hoatdong.AutoSize = true;
         rbtn_hoatdong.ForeColor = Color.FromArgb(0, 126, 249);
-        rbtn_hoatdong.Location = new Point(5, 2);
+        rbtn_hoatdong.Location = new Point(3, 7);
         rbtn_hoatdong.Name = "rbtn_hoatdong";
-        rbtn_hoatdong.Size = new Size(82, 19);
+        rbtn_hoatdong.Size = new Size(101, 25);
         rbtn_hoatdong.TabIndex = 141;
         rbtn_hoatdong.TabStop = true;
         rbtn_hoatdong.Text = "Hoạt động";
@@ -137,19 +139,21 @@ partial class FrmStaff
         // lbl_tenAnh
         // 
         lbl_tenAnh.AutoSize = true;
+        lbl_tenAnh.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
         lbl_tenAnh.ForeColor = Color.FromArgb(0, 126, 249);
-        lbl_tenAnh.Location = new Point(932, 231);
+        lbl_tenAnh.Location = new Point(924, 226);
         lbl_tenAnh.Name = "lbl_tenAnh";
-        lbl_tenAnh.Size = new Size(48, 15);
+        lbl_tenAnh.Size = new Size(63, 21);
         lbl_tenAnh.TabIndex = 183;
         lbl_tenAnh.Text = "Tên ảnh";
         // 
         // btn_chonAnh
         // 
+        btn_chonAnh.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
         btn_chonAnh.ForeColor = Color.FromArgb(0, 126, 249);
-        btn_chonAnh.Location = new Point(912, 251);
+        btn_chonAnh.Location = new Point(892, 260);
         btn_chonAnh.Name = "btn_chonAnh";
-        btn_chonAnh.Size = new Size(100, 23);
+        btn_chonAnh.Size = new Size(127, 35);
         btn_chonAnh.TabIndex = 182;
         btn_chonAnh.Text = "Chọn ảnh";
         btn_chonAnh.UseVisualStyleBackColor = true;
@@ -166,26 +170,29 @@ partial class FrmStaff
         // 
         // txt_email
         // 
+        txt_email.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
         txt_email.Location = new Point(552, 101);
         txt_email.Name = "txt_email";
-        txt_email.Size = new Size(245, 23);
+        txt_email.Size = new Size(250, 29);
         txt_email.TabIndex = 180;
         // 
         // label11
         // 
         label11.AutoSize = true;
+        label11.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
         label11.ForeColor = Color.FromArgb(0, 126, 249);
         label11.Location = new Point(462, 101);
         label11.Name = "label11";
-        label11.Size = new Size(36, 15);
+        label11.Size = new Size(48, 21);
         label11.TabIndex = 179;
         label11.Text = "Email";
         // 
         // txt_timkiem
         // 
+        txt_timkiem.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
         txt_timkiem.Location = new Point(552, 223);
         txt_timkiem.Name = "txt_timkiem";
-        txt_timkiem.Size = new Size(245, 23);
+        txt_timkiem.Size = new Size(250, 29);
         txt_timkiem.TabIndex = 175;
         txt_timkiem.Text = "Tìm Kiếm ...";
         // 
@@ -201,7 +208,9 @@ partial class FrmStaff
         // 
         // btn_clear
         // 
-        btn_clear.Location = new Point(1158, 154);
+        btn_clear.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+        btn_clear.ForeColor = Color.FromArgb(0, 126, 249);
+        btn_clear.Location = new Point(1153, 173);
         btn_clear.Name = "btn_clear";
         btn_clear.Size = new Size(120, 50);
         btn_clear.TabIndex = 173;
@@ -211,7 +220,9 @@ partial class FrmStaff
         // 
         // btn_sua
         // 
-        btn_sua.Location = new Point(1158, 88);
+        btn_sua.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+        btn_sua.ForeColor = Color.FromArgb(0, 126, 249);
+        btn_sua.Location = new Point(1153, 107);
         btn_sua.Name = "btn_sua";
         btn_sua.Size = new Size(120, 50);
         btn_sua.TabIndex = 172;
@@ -221,7 +232,9 @@ partial class FrmStaff
         // 
         // btn_them
         // 
-        btn_them.Location = new Point(1158, 21);
+        btn_them.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+        btn_them.ForeColor = Color.FromArgb(0, 126, 249);
+        btn_them.Location = new Point(1153, 40);
         btn_them.Name = "btn_them";
         btn_them.Size = new Size(120, 50);
         btn_them.TabIndex = 171;
@@ -232,160 +245,178 @@ partial class FrmStaff
         // label14
         // 
         label14.AutoSize = true;
+        label14.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
         label14.ForeColor = Color.FromArgb(0, 126, 249);
         label14.Location = new Point(462, 181);
         label14.Name = "label14";
-        label14.Size = new Size(61, 15);
+        label14.Size = new Size(82, 21);
         label14.TabIndex = 169;
         label14.Text = "Trạng Thái";
         // 
         // dtpicker_ngaysinh
         // 
+        dtpicker_ngaysinh.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
         dtpicker_ngaysinh.Location = new Point(552, 61);
         dtpicker_ngaysinh.Name = "dtpicker_ngaysinh";
-        dtpicker_ngaysinh.Size = new Size(245, 23);
+        dtpicker_ngaysinh.Size = new Size(250, 29);
         dtpicker_ngaysinh.TabIndex = 167;
         // 
         // txt_matkhau
         // 
+        txt_matkhau.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
         txt_matkhau.Location = new Point(552, 141);
         txt_matkhau.Name = "txt_matkhau";
-        txt_matkhau.Size = new Size(245, 23);
+        txt_matkhau.Size = new Size(250, 29);
         txt_matkhau.TabIndex = 166;
         // 
         // txt_sdt
         // 
+        txt_sdt.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
         txt_sdt.Location = new Point(552, 21);
         txt_sdt.Name = "txt_sdt";
-        txt_sdt.Size = new Size(245, 23);
+        txt_sdt.Size = new Size(250, 29);
         txt_sdt.TabIndex = 165;
         // 
         // txt_diachi
         // 
-        txt_diachi.Location = new Point(187, 223);
+        txt_diachi.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+        txt_diachi.Location = new Point(167, 223);
         txt_diachi.Name = "txt_diachi";
-        txt_diachi.Size = new Size(245, 23);
+        txt_diachi.Size = new Size(250, 29);
         txt_diachi.TabIndex = 164;
         txt_diachi.Leave += txt_diachi_Leave;
         // 
         // txt_ten
         // 
-        txt_ten.Location = new Point(187, 141);
+        txt_ten.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+        txt_ten.Location = new Point(167, 141);
         txt_ten.Name = "txt_ten";
-        txt_ten.Size = new Size(245, 23);
+        txt_ten.Size = new Size(250, 29);
         txt_ten.TabIndex = 163;
         txt_ten.Leave += txt_ten_Leave;
         // 
         // txt_tendem
         // 
-        txt_tendem.Location = new Point(187, 101);
+        txt_tendem.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+        txt_tendem.Location = new Point(167, 101);
         txt_tendem.Name = "txt_tendem";
-        txt_tendem.Size = new Size(245, 23);
+        txt_tendem.Size = new Size(250, 29);
         txt_tendem.TabIndex = 162;
         txt_tendem.Leave += txt_tendem_Leave;
         // 
         // txt_ho
         // 
-        txt_ho.Location = new Point(187, 61);
+        txt_ho.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+        txt_ho.Location = new Point(167, 61);
         txt_ho.Name = "txt_ho";
-        txt_ho.Size = new Size(245, 23);
+        txt_ho.Size = new Size(250, 29);
         txt_ho.TabIndex = 161;
         txt_ho.Leave += txt_ho_Leave;
         // 
         // txt_ma
         // 
-        txt_ma.Location = new Point(187, 21);
+        txt_ma.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+        txt_ma.Location = new Point(167, 21);
         txt_ma.Name = "txt_ma";
-        txt_ma.Size = new Size(245, 23);
+        txt_ma.Size = new Size(250, 29);
         txt_ma.TabIndex = 160;
         // 
         // label12
         // 
         label12.AutoSize = true;
+        label12.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
         label12.ForeColor = Color.FromArgb(0, 126, 249);
         label12.Location = new Point(462, 141);
         label12.Name = "label12";
-        label12.Size = new Size(58, 15);
+        label12.Size = new Size(76, 21);
         label12.TabIndex = 159;
         label12.Text = "Mật Khẩu";
         // 
         // label9
         // 
         label9.AutoSize = true;
+        label9.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
         label9.ForeColor = Color.FromArgb(0, 126, 249);
         label9.Location = new Point(462, 61);
         label9.Name = "label9";
-        label9.Size = new Size(61, 15);
+        label9.Size = new Size(82, 21);
         label9.TabIndex = 157;
         label9.Text = "Ngày Sinh";
         // 
         // label8
         // 
         label8.AutoSize = true;
+        label8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
         label8.ForeColor = Color.FromArgb(0, 126, 249);
         label8.Location = new Point(462, 21);
         label8.Name = "label8";
-        label8.Size = new Size(27, 15);
+        label8.Size = new Size(38, 21);
         label8.TabIndex = 156;
         label8.Text = "SĐT";
         // 
         // label7
         // 
         label7.AutoSize = true;
+        label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
         label7.ForeColor = Color.FromArgb(0, 126, 249);
-        label7.Location = new Point(112, 223);
+        label7.Location = new Point(64, 225);
         label7.Name = "label7";
-        label7.Size = new Size(45, 15);
+        label7.Size = new Size(60, 21);
         label7.TabIndex = 155;
         label7.Text = "Địa Chỉ";
         // 
         // label6
         // 
         label6.AutoSize = true;
+        label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
         label6.ForeColor = Color.FromArgb(0, 126, 249);
-        label6.Location = new Point(112, 181);
+        label6.Location = new Point(64, 183);
         label6.Name = "label6";
-        label6.Size = new Size(54, 15);
+        label6.Size = new Size(73, 21);
         label6.TabIndex = 154;
         label6.Text = "Giới Tính";
         // 
         // label5
         // 
         label5.AutoSize = true;
+        label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
         label5.ForeColor = Color.FromArgb(0, 126, 249);
-        label5.Location = new Point(112, 141);
+        label5.Location = new Point(64, 143);
         label5.Name = "label5";
-        label5.Size = new Size(25, 15);
+        label5.Size = new Size(33, 21);
         label5.TabIndex = 153;
         label5.Text = "Tên";
         // 
         // label4
         // 
         label4.AutoSize = true;
+        label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
         label4.ForeColor = Color.FromArgb(0, 126, 249);
-        label4.Location = new Point(112, 101);
+        label4.Location = new Point(64, 103);
         label4.Name = "label4";
-        label4.Size = new Size(53, 15);
+        label4.Size = new Size(70, 21);
         label4.TabIndex = 152;
         label4.Text = "Tên Đệm";
         // 
         // label3
         // 
         label3.AutoSize = true;
+        label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
         label3.ForeColor = Color.FromArgb(0, 126, 249);
-        label3.Location = new Point(112, 61);
+        label3.Location = new Point(64, 63);
         label3.Name = "label3";
-        label3.Size = new Size(23, 15);
+        label3.Size = new Size(30, 21);
         label3.TabIndex = 151;
         label3.Text = "Họ";
         // 
         // label2
         // 
         label2.AutoSize = true;
+        label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
         label2.ForeColor = Color.FromArgb(0, 126, 249);
-        label2.Location = new Point(112, 21);
+        label2.Location = new Point(64, 23);
         label2.Name = "label2";
-        label2.Size = new Size(24, 15);
+        label2.Size = new Size(32, 21);
         label2.TabIndex = 150;
         label2.Text = "Mã";
         // 

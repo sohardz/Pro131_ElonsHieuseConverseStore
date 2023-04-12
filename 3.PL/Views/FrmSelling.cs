@@ -2,7 +2,6 @@
 using _2.BUS.Services;
 using _2.BUS.ViewModels;
 using _3.PL.Utilities;
-using System.Windows.Forms.Design;
 
 namespace _3.PL.Views;
 
@@ -20,6 +19,9 @@ public partial class FrmSelling : Form
     private string maHd;
     private CustomerView khachHang;
     private List<BillView> lstHd;
+
+    private List<BillView> lstBillNow;
+    private List<BillDetailView> lstBillDetailNow;
 
     public FrmSelling()
     {
@@ -80,15 +82,10 @@ public partial class FrmSelling : Form
         dgrid_undoneOrder.Columns[0].Name = "STT";
         dgrid_undoneOrder.Columns[1].Name = "Mã hóa đơn";
         dgrid_undoneOrder.Columns[2].Name = "Tên khách hàng";
-        dgrid_undoneOrder.Rows.Clear();
-
-        var listsomething1 = _billService.GetAll().Count();
-
-        var listsomething = _billService.GetAll().Where(c => c.Status == 0).Count();
+        dgrid_undoneOrder.Rows.Clear(); ;
 
         foreach (var x in _billService.GetAll().Where(c => c.Status == 0))
         {
-            var e = x.Ma;
             dgrid_undoneOrder.Rows.Add(stt++, x.Ma, x.CustomerName);
         }
     }
@@ -108,7 +105,7 @@ public partial class FrmSelling : Form
         dgrid_orderDetail.Rows.Clear();
 
         dgrid_orderDetail.Columns[0].Width = 35;
-        dgrid_orderDetail.Columns[2].Width = 55;
+        dgrid_orderDetail.Columns[2].Width = 70;
 
         foreach (var x in lstHdCt)
         {
@@ -136,6 +133,7 @@ public partial class FrmSelling : Form
         }
     }
 
+    //thêm sản phẩm vào giỏ hàng
     private void AddProductToCart(string ma)
     {
         var giay = _shoesService.GetAll().FirstOrDefault(c => c.Ma == ma);
@@ -161,6 +159,7 @@ public partial class FrmSelling : Form
         LoadHoaDonCho();
     }
 
+    //thêm sản phẩm vào giỏ hàng
     private void dgrid_productDetail_CellClick(object sender, DataGridViewCellEventArgs e)
     {
         if (e.RowIndex >= 0 && e.RowIndex <= dgrid_productDetail.RowCount - 1)
@@ -172,6 +171,7 @@ public partial class FrmSelling : Form
         else return;
     }
 
+
     private void dgrid_orderDetail_CellClick(object sender, DataGridViewCellEventArgs e)
     {
         if (e.RowIndex >= 0 && e.RowIndex <= dgrid_orderDetail.RowCount - 1)
@@ -182,6 +182,7 @@ public partial class FrmSelling : Form
         else return;
     }
 
+    //thay đổi số lượng ở giỏ hàng
     private void dgrid_orderDetail_CellValueChanged(object sender, DataGridViewCellEventArgs e)
     {
         if (e.RowIndex >= 0)
@@ -221,6 +222,7 @@ public partial class FrmSelling : Form
         else return;
     }
 
+    //thanh toán
     private void btn_pay_Click(object sender, EventArgs e)
     {
         if (txt_maOrder.Text != "")
@@ -245,10 +247,11 @@ public partial class FrmSelling : Form
                     DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn thanh toán không?", "Thanh toán", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
                     {
+                        hoadon.DateofPayment = DateTime.Now;
                         hoadon.Status = 1;
                         _billService.Update(hoadon);
                         MessageBox.Show("Thanh toán thành công");
-                        txt_sale.Text = "";
+                        txt_maOrder.Text = "";
                         txt_customerGive.Text = "";
                         lbl_orderTotal.Text = "0";
                         lbl_change.Text = "0";
@@ -266,27 +269,19 @@ public partial class FrmSelling : Form
         }
     }
 
+    //nhập tiền khách đưa -> tiền trả
     private void txt_customerGive_TextChanged(object sender, EventArgs e)
     {
-        if (!(txt_customerGive.Text == "" && txt_sale.Text == ""))
+        if (!(txt_customerGive.Text == ""))
         {
-            if (txt_sale.Text == "")
+            if (decimal.TryParse(txt_customerGive.Text, out decimal _))
             {
-                if (decimal.TryParse(txt_customerGive.Text, out decimal _))
-                {
-                    lbl_change.Text = (Convert.ToDecimal(txt_customerGive.Text) - Convert.ToDecimal(lbl_orderTotal.Text)).ToString();
-                }
-            }
-            else
-            {
-                if (decimal.TryParse(txt_customerGive.Text, out decimal _) && decimal.TryParse(txt_sale.Text, out decimal _))
-                {
-                    lbl_change.Text = (Convert.ToDecimal(txt_customerGive.Text) - Convert.ToDecimal(lbl_orderTotal.Text) + Convert.ToDecimal(txt_sale.Text)).ToString();
-                }
+                lbl_change.Text = (Convert.ToDecimal(txt_customerGive.Text) - Convert.ToDecimal(lbl_orderTotal.Text)).ToString();
             }
         }
     }
 
+    //xóa sản phẩm khỏi giỏ hàng
     private void btn_deleteProduct_Click(object sender, EventArgs e)
     {
         if (lstHdCt.Any())
@@ -423,6 +418,7 @@ public partial class FrmSelling : Form
         }
     }
 
+    //chọn đơn hàng đang xử lí
     private void dgrid_undoneOrder_CellClick(object sender, DataGridViewCellEventArgs e)
     {
         if (e.RowIndex >= 0 && e.RowIndex < dgrid_undoneOrder.RowCount - 1)

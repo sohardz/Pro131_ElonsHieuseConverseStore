@@ -36,18 +36,19 @@ partial class FrmSoLuong
         // label1
         // 
         label1.AutoSize = true;
-        label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+        label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
         label1.Location = new Point(78, 9);
         label1.Name = "label1";
-        label1.Size = new Size(142, 21);
+        label1.Size = new Size(171, 25);
         label1.TabIndex = 5;
         label1.Text = "Mời nhập số lượng";
         // 
         // btn_them
         // 
-        btn_them.Location = new Point(184, 51);
+        btn_them.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+        btn_them.Location = new Point(113, 98);
         btn_them.Name = "btn_them";
-        btn_them.Size = new Size(75, 23);
+        btn_them.Size = new Size(100, 40);
         btn_them.TabIndex = 4;
         btn_them.Text = "Thêm";
         btn_them.UseVisualStyleBackColor = true;
@@ -55,9 +56,10 @@ partial class FrmSoLuong
         // 
         // txt_soluong
         // 
-        txt_soluong.Location = new Point(26, 51);
+        txt_soluong.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+        txt_soluong.Location = new Point(44, 49);
         txt_soluong.Name = "txt_soluong";
-        txt_soluong.Size = new Size(108, 23);
+        txt_soluong.Size = new Size(250, 29);
         txt_soluong.TabIndex = 3;
         // 
         // FrmSoLuong
@@ -65,7 +67,7 @@ partial class FrmSoLuong
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
         BackColor = SystemColors.ActiveCaption;
-        ClientSize = new Size(300, 100);
+        ClientSize = new Size(350, 150);
         Controls.Add(label1);
         Controls.Add(btn_them);
         Controls.Add(txt_soluong);

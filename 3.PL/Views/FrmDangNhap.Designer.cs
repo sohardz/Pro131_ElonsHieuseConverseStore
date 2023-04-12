@@ -30,8 +30,6 @@
         {
             components = new System.ComponentModel.Container();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            button2 = new Button();
-            button1 = new Button();
             linkLabel1 = new LinkLabel();
             cb_SaveAccount = new Guna.UI2.WinForms.Guna2CheckBox();
             btn_login = new Guna.UI2.WinForms.Guna2Button();
@@ -54,8 +52,6 @@
             // guna2Panel1
             // 
             guna2Panel1.BackColor = Color.FromArgb(20, 30, 54);
-            guna2Panel1.Controls.Add(button2);
-            guna2Panel1.Controls.Add(button1);
             guna2Panel1.Controls.Add(linkLabel1);
             guna2Panel1.Controls.Add(cb_SaveAccount);
             guna2Panel1.Controls.Add(btn_login);
@@ -69,37 +65,14 @@
             guna2Panel1.Size = new Size(290, 505);
             guna2Panel1.TabIndex = 7;
             // 
-            // button2
-            // 
-            button2.ForeColor = Color.Black;
-            button2.Image = Properties.Resources.icons8_hide_30;
-            button2.Location = new Point(249, 247);
-            button2.Name = "button2";
-            button2.Size = new Size(35, 35);
-            button2.TabIndex = 10;
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.White;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.Black;
-            button1.Image = Properties.Resources.icons8_eye_30;
-            button1.Location = new Point(249, 247);
-            button1.Name = "button1";
-            button1.Size = new Size(35, 35);
-            button1.TabIndex = 8;
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
-            // 
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
+            linkLabel1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             linkLabel1.LinkColor = Color.White;
-            linkLabel1.Location = new Point(49, 325);
+            linkLabel1.Location = new Point(40, 324);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(94, 15);
+            linkLabel1.Size = new Size(150, 25);
             linkLabel1.TabIndex = 9;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Quên mật khẩu?";
@@ -112,11 +85,12 @@
             cb_SaveAccount.CheckedState.BorderRadius = 0;
             cb_SaveAccount.CheckedState.BorderThickness = 0;
             cb_SaveAccount.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
+            cb_SaveAccount.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cb_SaveAccount.ForeColor = Color.White;
-            cb_SaveAccount.Location = new Point(49, 292);
+            cb_SaveAccount.Location = new Point(40, 285);
             cb_SaveAccount.Margin = new Padding(3, 2, 3, 2);
             cb_SaveAccount.Name = "cb_SaveAccount";
-            cb_SaveAccount.Size = new Size(102, 19);
+            cb_SaveAccount.Size = new Size(129, 25);
             cb_SaveAccount.TabIndex = 8;
             cb_SaveAccount.Text = "Nhớ mật khẩu";
             cb_SaveAccount.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
@@ -134,9 +108,9 @@
             btn_login.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_login.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btn_login.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btn_login.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_login.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btn_login.ForeColor = Color.White;
-            btn_login.Location = new Point(86, 370);
+            btn_login.Location = new Point(70, 372);
             btn_login.Margin = new Padding(3, 2, 3, 2);
             btn_login.Name = "btn_login";
             btn_login.Size = new Size(120, 40);
@@ -147,21 +121,24 @@
             // 
             // txt_password
             // 
-            txt_password.Location = new Point(49, 254);
+            txt_password.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_password.Location = new Point(23, 238);
             txt_password.Margin = new Padding(3, 2, 3, 2);
             txt_password.Name = "txt_password";
             txt_password.PlaceholderText = "Mật khẩu";
-            txt_password.Size = new Size(197, 23);
+            txt_password.Size = new Size(246, 33);
             txt_password.TabIndex = 3;
+            txt_password.UseSystemPasswordChar = true;
             // 
             // txt_email
             // 
             txt_email.BackColor = SystemColors.Window;
-            txt_email.Location = new Point(49, 208);
+            txt_email.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_email.Location = new Point(23, 187);
             txt_email.Margin = new Padding(3, 2, 3, 2);
             txt_email.Name = "txt_email";
             txt_email.PlaceholderText = "Email";
-            txt_email.Size = new Size(197, 23);
+            txt_email.Size = new Size(246, 33);
             txt_email.TabIndex = 2;
             // 
             // guna2PictureBox1
@@ -170,7 +147,7 @@
             guna2PictureBox1.FillColor = Color.Transparent;
             guna2PictureBox1.Image = Properties.Resources.H;
             guna2PictureBox1.ImageRotate = 0F;
-            guna2PictureBox1.Location = new Point(72, 74);
+            guna2PictureBox1.Location = new Point(64, 32);
             guna2PictureBox1.Margin = new Padding(3, 2, 3, 2);
             guna2PictureBox1.Name = "guna2PictureBox1";
             guna2PictureBox1.Size = new Size(152, 101);
@@ -280,7 +257,5 @@
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private LinkLabel linkLabel1;
         private Guna.UI2.WinForms.Guna2CheckBox cb_SaveAccount;
-        private Button button2;
-        private Button button1;
     }
 }

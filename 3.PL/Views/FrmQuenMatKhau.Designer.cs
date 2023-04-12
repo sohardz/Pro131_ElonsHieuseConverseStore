@@ -95,12 +95,12 @@
             btn_back.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btn_back.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btn_back.FillColor = Color.FromArgb(20, 30, 54);
-            btn_back.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_back.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             btn_back.ForeColor = Color.White;
-            btn_back.Location = new Point(178, 229);
+            btn_back.Location = new Point(188, 216);
             btn_back.Margin = new Padding(3, 2, 3, 2);
             btn_back.Name = "btn_back";
-            btn_back.Size = new Size(81, 29);
+            btn_back.Size = new Size(116, 42);
             btn_back.TabIndex = 7;
             btn_back.Text = "Quay lại";
             btn_back.UseTransparentBackground = true;
@@ -115,12 +115,12 @@
             btn_confirm.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_confirm.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btn_confirm.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btn_confirm.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_confirm.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             btn_confirm.ForeColor = Color.White;
-            btn_confirm.Location = new Point(67, 229);
+            btn_confirm.Location = new Point(40, 216);
             btn_confirm.Margin = new Padding(3, 2, 3, 2);
             btn_confirm.Name = "btn_confirm";
-            btn_confirm.Size = new Size(81, 29);
+            btn_confirm.Size = new Size(114, 42);
             btn_confirm.TabIndex = 6;
             btn_confirm.Text = "Xác nhận";
             btn_confirm.UseTransparentBackground = true;
@@ -128,18 +128,19 @@
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(67, 158);
+            txtEmail.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEmail.Location = new Point(23, 147);
             txtEmail.Margin = new Padding(3, 2, 3, 2);
             txtEmail.Name = "txtEmail";
             txtEmail.PlaceholderText = "Email";
-            txtEmail.Size = new Size(193, 23);
+            txtEmail.Size = new Size(293, 33);
             txtEmail.TabIndex = 2;
             // 
             // guna2HtmlLabel2
             // 
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2HtmlLabel2.Location = new Point(114, 88);
+            guna2HtmlLabel2.Location = new Point(115, 120);
             guna2HtmlLabel2.Margin = new Padding(3, 2, 3, 2);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             guna2HtmlLabel2.Size = new Size(92, 23);
@@ -149,13 +150,13 @@
             // guna2HtmlLabel1
             // 
             guna2HtmlLabel1.BackColor = Color.Transparent;
-            guna2HtmlLabel1.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
-            guna2HtmlLabel1.Location = new Point(87, 52);
+            guna2HtmlLabel1.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            guna2HtmlLabel1.Location = new Point(52, 31);
             guna2HtmlLabel1.Margin = new Padding(3, 2, 3, 2);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(145, 32);
+            guna2HtmlLabel1.Size = new Size(231, 47);
             guna2HtmlLabel1.TabIndex = 0;
-            guna2HtmlLabel1.Text = "Nhớ mật khẩu";
+            guna2HtmlLabel1.Text = "Quên mật khẩu";
             // 
             // guna2ShadowForm1
             // 
