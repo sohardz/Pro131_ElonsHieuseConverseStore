@@ -5,8 +5,6 @@ using _3.PL.Utilities;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 
-
-
 namespace _3.PL.Views;
 
 public partial class FrmBill : Form
@@ -16,6 +14,7 @@ public partial class FrmBill : Form
     private string maHoadon;
     private List<BillDetailView> lstBill;
     private int stt = 1;
+
     public FrmBill()
     {
         InitializeComponent();
@@ -43,6 +42,7 @@ public partial class FrmBill : Form
             dgrid_bill.Rows.Add(stt++, x.Ma, x.DateofCreation, x.DateofPayment, x.CustomerName, x.StaffName, Utility.TrangThaiHoaDon()[x.Status]);
         }
     }
+
     private void SetupBillDetailDrgid()
     {
         dgrid_billdetail.ColumnCount = 7;
@@ -53,12 +53,11 @@ public partial class FrmBill : Form
         dgrid_billdetail.Columns[4].Name = "Số lượng";
         dgrid_billdetail.Columns[5].Name = "Thành tiền";
         dgrid_billdetail.Columns[6].Name = "Trạng thái";
-
-
     }
+
     private void btn_printBill_Click(object sender, EventArgs e)
     {
-        if (dgrid_bill.Rows.Count > 0)
+        if (dgrid_billdetail.Rows.Count > 0)
         {
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.Filter = "PDF (*.pdf)|*.pdf";
@@ -82,14 +81,14 @@ public partial class FrmBill : Form
                 {
                     try
                     {
-                        PdfPTable pdfTable = new PdfPTable(dgrid_billdetail.Columns.Count);
+                        PdfPTable pdfTable = new(dgrid_billdetail.Columns.Count);
                         pdfTable.DefaultCell.Padding = 3;
                         pdfTable.WidthPercentage = 100;
                         pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
 
                         foreach (DataGridViewColumn column in dgrid_billdetail.Columns)
                         {
-                            PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
+                            PdfPCell cell = new(new Phrase(column.HeaderText));
                             pdfTable.AddCell(cell);
                         }
 
@@ -101,9 +100,9 @@ public partial class FrmBill : Form
                             }
                         }
 
-                        using (FileStream stream = new FileStream(sfd.FileName, FileMode.Create))
+                        using (FileStream stream = new(sfd.FileName, FileMode.Create))
                         {
-                            Document pdfDoc = new Document(PageSize.A4, 10f, 20f, 20f, 10f);
+                            Document pdfDoc = new(PageSize.A4, 10f, 20f, 20f, 10f);
                             PdfWriter.GetInstance(pdfDoc, stream);
                             pdfDoc.Open();
                             pdfDoc.Add(pdfTable);
