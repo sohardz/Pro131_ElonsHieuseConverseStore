@@ -55,6 +55,8 @@ partial class FrmShoes
         txt_timkiem.Size = new Size(250, 23);
         txt_timkiem.TabIndex = 67;
         txt_timkiem.Text = "Tìm Kiếm";
+        txt_timkiem.TextChanged += txt_timkiem_TextChanged;
+        txt_timkiem.Leave += txt_timkiem_Leave;
         // 
         // btn_category
         // 

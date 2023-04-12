@@ -1,5 +1,8 @@
 ﻿using _2.BUS.IServices;
 using _2.BUS.Services;
+using _3.PL.Utilities;
+using Org.BouncyCastle.Math.EC.Rfc7748;
+using System.Windows.Forms;
 
 namespace _3.PL.Views;
 
@@ -20,11 +23,12 @@ public partial class FrmShoes : Form
         _colorService = new ColorService();
         _sizeService = new SizeService();
         _shoesService = new ShoesService();
-        LoadDgrid();
+        LoadDgrid(null);
     }
 
-    public void LoadDgrid()
+    public void LoadDgrid(string input)
     {
+
         int stt = 1;
         dgrid_shoes.ColumnCount = 11;
         dgrid_shoes.Columns[0].Name = "STT";
@@ -40,9 +44,10 @@ public partial class FrmShoes : Form
         dgrid_shoes.Columns[10].Name = "Trạng thái";
         dgrid_shoes.Rows.Clear();
 
-        foreach (var x in _shoesService.GetAll())
+        foreach (var x in _shoesService.GetAll(input))
         {
-            dgrid_shoes.Rows.Add(stt++, x.Ma, x.Name, x.CategoryName, x.ColorName, x.SizeNumber, x.Stock, x.CostPrice, x.SalePrice, x.Description, x.Status);
+            dgrid_shoes.Rows.Add(stt++, x.Ma, x.Name, x.CategoryName, x.ColorName, x.SizeNumber, x.Stock, x.CostPrice, x.SalePrice,
+                x.Description, Utility.TrangThai()[x.Status]);
         }
     }
 
@@ -85,5 +90,16 @@ public partial class FrmShoes : Form
     {
         FrmConfigShoes frmConfigShoes = new(this);
         frmConfigShoes.Show();
+    }
+
+    private void txt_timkiem_TextChanged(object sender, EventArgs e)
+    {
+        
+    }
+
+    private void txt_timkiem_Leave(object sender, EventArgs e)
+    {
+        if (string.IsNullOrEmpty(txt_timkiem.Text)) return;
+        LoadDgrid(txt_timkiem.Text);
     }
 }
