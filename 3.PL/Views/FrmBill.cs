@@ -37,15 +37,14 @@ public partial class FrmBill : Form
         dgrid_bill.Columns[1].Name = "Mã";
         dgrid_bill.Columns[2].Name = "Ngày tạo";
         dgrid_bill.Columns[3].Name = "Ngày thanh toán";
-        dgrid_bill.Columns[4].Name = "Tông tiền";
-        dgrid_bill.Columns[5].Name = "Khách hàng";
-        dgrid_bill.Columns[6].Name = "Nhân viên";
-        dgrid_bill.Columns[7].Name = "Trạng thái";
+        dgrid_bill.Columns[4].Name = "Khách hàng";
+        dgrid_bill.Columns[5].Name = "Nhân viên";
+        dgrid_bill.Columns[6].Name = "Trạng thái";
         dgrid_bill.Rows.Clear();
 
         foreach (var x in _billService.GetAll())
         {
-            dgrid_bill.Rows.Add(stt++, x.Ma, x.DateofCreation, x.DateofPayment,"", x.StaffName, x.CustomerName, Utility.TrangThaiHoaDon()[x.Status]);
+            dgrid_bill.Rows.Add(stt++, x.Ma, x.DateofCreation, x.DateofPayment, x.CustomerName, x.StaffName, Utility.TrangThaiHoaDon()[x.Status]);
         }
     }
     private void SetupBillDetailDrgid()
