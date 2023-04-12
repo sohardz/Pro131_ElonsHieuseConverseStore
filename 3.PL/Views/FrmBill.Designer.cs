@@ -31,6 +31,7 @@ partial class FrmBill
         dgrid_bill = new DataGridView();
         dgrid_billdetail = new DataGridView();
         textBox1 = new TextBox();
+        btn_printBill = new Button();
         ((System.ComponentModel.ISupportInitialize)dgrid_bill).BeginInit();
         ((System.ComponentModel.ISupportInitialize)dgrid_billdetail).BeginInit();
         SuspendLayout();
@@ -43,6 +44,7 @@ partial class FrmBill
         dgrid_bill.RowTemplate.Height = 25;
         dgrid_bill.Size = new Size(1237, 250);
         dgrid_bill.TabIndex = 0;
+        dgrid_bill.CellClick += dgrid_bill_CellClick;
         // 
         // dgrid_billdetail
         // 
@@ -50,7 +52,7 @@ partial class FrmBill
         dgrid_billdetail.Location = new Point(52, 350);
         dgrid_billdetail.Name = "dgrid_billdetail";
         dgrid_billdetail.RowTemplate.Height = 25;
-        dgrid_billdetail.Size = new Size(1237, 390);
+        dgrid_billdetail.Size = new Size(1237, 355);
         dgrid_billdetail.TabIndex = 1;
         // 
         // textBox1
@@ -62,11 +64,22 @@ partial class FrmBill
         textBox1.TabIndex = 2;
         textBox1.Text = "Tìm kiếm";
         // 
+        // btn_printBill
+        // 
+        btn_printBill.Location = new Point(1179, 725);
+        btn_printBill.Name = "btn_printBill";
+        btn_printBill.Size = new Size(110, 51);
+        btn_printBill.TabIndex = 3;
+        btn_printBill.Text = "In hóa đơn";
+        btn_printBill.UseVisualStyleBackColor = true;
+        btn_printBill.Click += btn_printBill_Click;
+        // 
         // FrmBill
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
-        ClientSize = new Size(1350, 800);
+        ClientSize = new Size(1370, 788);
+        Controls.Add(btn_printBill);
         Controls.Add(textBox1);
         Controls.Add(dgrid_billdetail);
         Controls.Add(dgrid_bill);
@@ -85,4 +98,5 @@ partial class FrmBill
     private DataGridView dgrid_bill;
     private DataGridView dgrid_billdetail;
     private TextBox textBox1;
+    private Button btn_printBill;
 }
