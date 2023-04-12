@@ -86,7 +86,7 @@ public class BillService : IBillService
                     DateofPayment = a.DateofPayment,
                     CustomerName = b.FirstName,
                     StaffName = c.FirstName,
-                    Status = c.Status,
+                    Status = a.Status,
                 }
             ).ToList();
         return lst;
