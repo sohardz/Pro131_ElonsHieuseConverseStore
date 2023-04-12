@@ -28,7 +28,7 @@ public partial class FrmDashboard : Form
         pnl_nav.Left = btn_sellingService.Left;
         //btn_sellingService.BackColor = Color.FromArgb(46, 51, 73);
 
-        if(staff != null )
+        if (staff != null)
         {
             picBox_userAvatar.Image = new Bitmap(staff.ImageDirection);
             lbl_userName.Text = staff.LastName + staff.MiddleName + staff.FirstName;

@@ -33,14 +33,12 @@ partial class FrmSelling
         lbl_change = new Label();
         lbl_orderTotal = new Label();
         txt_customerGive = new TextBox();
-        txt_sale = new TextBox();
         txt_maOrder = new TextBox();
         rtxt_note = new RichTextBox();
         label12 = new Label();
         label11 = new Label();
         label10 = new Label();
         label9 = new Label();
-        label8 = new Label();
         label7 = new Label();
         groupBox3 = new GroupBox();
         txt_searchProduct = new TextBox();
@@ -76,14 +74,12 @@ partial class FrmSelling
         groupBox4.Controls.Add(lbl_change);
         groupBox4.Controls.Add(lbl_orderTotal);
         groupBox4.Controls.Add(txt_customerGive);
-        groupBox4.Controls.Add(txt_sale);
         groupBox4.Controls.Add(txt_maOrder);
         groupBox4.Controls.Add(rtxt_note);
         groupBox4.Controls.Add(label12);
         groupBox4.Controls.Add(label11);
         groupBox4.Controls.Add(label10);
         groupBox4.Controls.Add(label9);
-        groupBox4.Controls.Add(label8);
         groupBox4.Controls.Add(label7);
         groupBox4.ForeColor = Color.FromArgb(0, 126, 249);
         groupBox4.Location = new Point(888, 405);
@@ -101,11 +97,12 @@ partial class FrmSelling
         btn_pay.TabIndex = 16;
         btn_pay.Text = "Thanh toán";
         btn_pay.UseVisualStyleBackColor = true;
+        btn_pay.Click += btn_pay_Click;
         // 
         // lbl_change
         // 
         lbl_change.AutoSize = true;
-        lbl_change.Location = new Point(137, 186);
+        lbl_change.Location = new Point(137, 139);
         lbl_change.Name = "lbl_change";
         lbl_change.Size = new Size(13, 15);
         lbl_change.TabIndex = 20;
@@ -114,7 +111,7 @@ partial class FrmSelling
         // lbl_orderTotal
         // 
         lbl_orderTotal.AutoSize = true;
-        lbl_orderTotal.Location = new Point(137, 110);
+        lbl_orderTotal.Location = new Point(137, 63);
         lbl_orderTotal.Name = "lbl_orderTotal";
         lbl_orderTotal.Size = new Size(13, 15);
         lbl_orderTotal.TabIndex = 19;
@@ -122,17 +119,11 @@ partial class FrmSelling
         // 
         // txt_customerGive
         // 
-        txt_customerGive.Location = new Point(137, 144);
+        txt_customerGive.Location = new Point(137, 97);
         txt_customerGive.Name = "txt_customerGive";
         txt_customerGive.Size = new Size(232, 23);
         txt_customerGive.TabIndex = 18;
-        // 
-        // txt_sale
-        // 
-        txt_sale.Location = new Point(137, 66);
-        txt_sale.Name = "txt_sale";
-        txt_sale.Size = new Size(232, 23);
-        txt_sale.TabIndex = 17;
+        txt_customerGive.TextChanged += txt_customerGive_TextChanged;
         // 
         // txt_maOrder
         // 
@@ -143,7 +134,7 @@ partial class FrmSelling
         // 
         // rtxt_note
         // 
-        rtxt_note.Location = new Point(137, 219);
+        rtxt_note.Location = new Point(137, 172);
         rtxt_note.Name = "rtxt_note";
         rtxt_note.Size = new Size(307, 45);
         rtxt_note.TabIndex = 6;
@@ -152,7 +143,7 @@ partial class FrmSelling
         // label12
         // 
         label12.AutoSize = true;
-        label12.Location = new Point(34, 222);
+        label12.Location = new Point(34, 175);
         label12.Name = "label12";
         label12.Size = new Size(48, 15);
         label12.TabIndex = 5;
@@ -161,7 +152,7 @@ partial class FrmSelling
         // label11
         // 
         label11.AutoSize = true;
-        label11.Location = new Point(34, 186);
+        label11.Location = new Point(34, 139);
         label11.Name = "label11";
         label11.Size = new Size(56, 15);
         label11.TabIndex = 4;
@@ -170,7 +161,7 @@ partial class FrmSelling
         // label10
         // 
         label10.AutoSize = true;
-        label10.Location = new Point(34, 147);
+        label10.Location = new Point(34, 100);
         label10.Name = "label10";
         label10.Size = new Size(87, 15);
         label10.TabIndex = 3;
@@ -179,20 +170,11 @@ partial class FrmSelling
         // label9
         // 
         label9.AutoSize = true;
-        label9.Location = new Point(34, 110);
+        label9.Location = new Point(34, 63);
         label9.Name = "label9";
         label9.Size = new Size(57, 15);
         label9.TabIndex = 2;
         label9.Text = "Tổng tiền";
-        // 
-        // label8
-        // 
-        label8.AutoSize = true;
-        label8.Location = new Point(34, 69);
-        label8.Name = "label8";
-        label8.Size = new Size(54, 15);
-        label8.TabIndex = 1;
-        label8.Text = "Giảm giá";
         // 
         // label7
         // 
@@ -231,6 +213,7 @@ partial class FrmSelling
         dgrid_productDetail.RowTemplate.Height = 25;
         dgrid_productDetail.Size = new Size(850, 400);
         dgrid_productDetail.TabIndex = 2;
+        dgrid_productDetail.CellClick += dgrid_productDetail_CellClick;
         // 
         // groupBox2
         // 
@@ -252,6 +235,7 @@ partial class FrmSelling
         dgrid_undoneOrder.RowTemplate.Height = 25;
         dgrid_undoneOrder.Size = new Size(435, 358);
         dgrid_undoneOrder.TabIndex = 1;
+        dgrid_undoneOrder.CellClick += dgrid_undoneOrder_CellClick;
         // 
         // groupBox1
         // 
@@ -329,6 +313,7 @@ partial class FrmSelling
         btn_updateOrder.TabIndex = 11;
         btn_updateOrder.Text = "Cập nhật ĐH";
         btn_updateOrder.UseVisualStyleBackColor = true;
+        btn_updateOrder.Click += btn_updateOrder_Click;
         // 
         // btn_addOrder
         // 
@@ -338,6 +323,7 @@ partial class FrmSelling
         btn_addOrder.TabIndex = 10;
         btn_addOrder.Text = "Tạo đơn hàng";
         btn_addOrder.UseVisualStyleBackColor = true;
+        btn_addOrder.Click += btn_addOrder_Click;
         // 
         // btn_deleteCart
         // 
@@ -347,6 +333,7 @@ partial class FrmSelling
         btn_deleteCart.TabIndex = 9;
         btn_deleteCart.Text = "Xóa giỏ hàng";
         btn_deleteCart.UseVisualStyleBackColor = true;
+        btn_deleteCart.Click += btn_deleteCart_Click;
         // 
         // btn_deleteProduct
         // 
@@ -356,6 +343,7 @@ partial class FrmSelling
         btn_deleteProduct.TabIndex = 8;
         btn_deleteProduct.Text = "Xóa sản phẩm";
         btn_deleteProduct.UseVisualStyleBackColor = true;
+        btn_deleteProduct.Click += btn_deleteProduct_Click;
         // 
         // lbl_customerName
         // 
@@ -392,6 +380,8 @@ partial class FrmSelling
         dgrid_orderDetail.RowTemplate.Height = 25;
         dgrid_orderDetail.Size = new Size(562, 212);
         dgrid_orderDetail.TabIndex = 0;
+        dgrid_orderDetail.CellClick += dgrid_orderDetail_CellClick;
+        dgrid_orderDetail.CellValueChanged += dgrid_orderDetail_CellValueChanged;
         // 
         // FrmSelling
         // 
@@ -426,14 +416,12 @@ partial class FrmSelling
     private Label lbl_change;
     private Label lbl_orderTotal;
     private TextBox txt_customerGive;
-    private TextBox txt_sale;
     private TextBox txt_maOrder;
     private RichTextBox rtxt_note;
     private Label label12;
     private Label label11;
     private Label label10;
     private Label label9;
-    private Label label8;
     private Label label7;
     private GroupBox groupBox3;
     private TextBox txt_searchProduct;
